@@ -17,23 +17,3 @@ Feature: Bookstore - Testar os endpoints da loja de livros
     And header Authorization = 'Bearer invalido'
     When method get
     Then status 401
-
-  Scenario: Adicionar um livro ao usuário com sucesso
-    * def userID = auth.userID
-    * def isbn = firstISBN
-    Given path '/Bookstore/v1/Books'
-    And header Authorization = 'Bearer ' + token
-    And request
-
-    """
-     {
-      "userID": "#(userID)",
-      "CollectionOfIsbn": [
-        {"isbn": "#(isbn)"}
-      ]
-     }
-    """
-
-    When method post
-    Then status 201
-    * match response.books[0].isbn == false
