@@ -36,4 +36,4 @@ Feature: Bookstore - Testar os endpoints da loja de livros
 
     When method post
     Then status 201
-    * match response.books[0].isbn == false
+    * match response.books[0].isbn == isbn
