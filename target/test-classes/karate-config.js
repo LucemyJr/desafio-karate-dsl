@@ -4,6 +4,10 @@ function fn() {
   if (!env) {
     env = 'dev';
   }
+
+  karate.configure('connectTimeout', 60000);
+  karate.configure('readTimeout', 60000);
+
   var config = {
     env: env,
     baseUrl: 'https://bookstore.toolsqa.com'

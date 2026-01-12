@@ -1,5 +1,6 @@
 Feature: Account - Testar os endpoints da conta
 
+  @smoke
   Scenario: Criar usuário com sucesso
     * def userName = 'usuario_' + java.util.UUID.randomUUID()
     * def password = '@Senha123'
@@ -16,6 +17,7 @@ Feature: Account - Testar os endpoints da conta
     Then status 201
     * def userID = response.userID
 
+  @smoke
   Scenario: Deletar usuário com sucesso
     * def auth = callonce read('classpath:auth/auth.feature')
     * def userID = auth.userID

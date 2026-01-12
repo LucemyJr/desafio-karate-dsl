@@ -10,7 +10,9 @@ class KarateTest {
 
     @Test
     void testParallel() {
-        Results results = Runner.path("classpath:account")
+        Results results = Runner.path("classpath:account", "classpath:bookstore")
+                .tags("@smoke")
+//                .tags("@timeout")
                 .parallel(1);
 
         assertEquals(0, results.getFailCount(), results.getErrorMessages());

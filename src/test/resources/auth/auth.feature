@@ -1,6 +1,6 @@
 Feature: Gerar um usuário e o token
 
-  @Token
+  @smoke @Token
   Scenario: Gerar o token para reutilização
     * def userName = 'usuario_' + java.util.UUID.randomUUID()
     * def password = '@Senha123'

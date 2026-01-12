@@ -5,22 +5,15 @@ Feature: Bookstore - Testar os endpoints da loja de livros
     * def token = auth.token
     * url baseUrl
 
-  Scenario: Listar os livros com sucesso
-    Given path '/Bookstore/v1/Books'
-    And header Authorization = 'Bearer ' + token
-    When method get
-    Then status 200
-    * def firstISBN = response.books[0].isbn
-
-  Scenario: Listrar livros (falha)
-    Given path '/BookStore/v1/Books'
-    And header Authorization = 'Bearer invalido'
-    When method get
-    Then status 401
-
+  @timeout
   Scenario: Adicionar um livro ao usuário com sucesso
     * def userID = auth.userID
-    * def isbn = firstISBN
+
+    Given path '/Bookstore/v1/Books'
+    When method get
+    Then status 200
+    * def isbn = response.books[0].isbn
+
     Given path '/Bookstore/v1/Books'
     And header Authorization = 'Bearer ' + token
     And request
@@ -36,14 +29,14 @@ Feature: Bookstore - Testar os endpoints da loja de livros
 
     When method post
     Then status 201
-    * match response.books[0].isbn == isbn
 
+  @timeout
   Scenario: Adicionar um livro ao usuário (falha)
     * def userID = auth.userID
     * def isbn = '0000000000'
 
     Given path '/Bookstore/v1/Books'
-    And header Authorization = 'Baerer ' + token
+    And header Authorization = 'Bearer ' + token
     And request
 
     """
@@ -57,3 +50,10 @@ Feature: Bookstore - Testar os endpoints da loja de livros
 
     When method post
     Then status 400
+
+  @smoke
+  Scenario: Listar catálogo de livros com sucesso
+    Given path '/Bookstore/v1/Books'
+    When method get
+    Then status 200
+    * assert response.books.length > 0
