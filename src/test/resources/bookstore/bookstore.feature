@@ -57,3 +57,17 @@ Feature: Bookstore - Testar os endpoints da loja de livros
     When method get
     Then status 200
     * assert response.books.length > 0
+
+  @smoke
+  Scenario: Buscar livro por ISBN com sucesso
+    * def auth = callonce read('classpath:auth/auth.feature')
+    * def token = auth.token
+    * def userID = auth.userID
+    * def isbn = '9781449325862'
+
+    Given path '/Bookstore/v1/Book'
+    And param ISBN = isbn
+    And header Authorization = 'Bearer ' + token
+    When method get
+    Then status 200
+    * match response.isbn == isbn

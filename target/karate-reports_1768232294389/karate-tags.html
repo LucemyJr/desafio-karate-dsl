@@ -9,8 +9,8 @@
     <script type="text/javascript" src="res/jquery.min.js"></script>
     <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
     <script type="text/javascript" src="res/bootstrap.min.js"></script>
-    <script type="text/javascript" src="res/karate-report.js"></script>    
-    <title>Karate Summary Report</title>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>Karate Tags Report</title>
   </head>
   <body>
     <div id="root-container">
@@ -22,7 +22,7 @@
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">2</div>
+      <div id="nav-pass" class="bg-success">1</div>
       <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
@@ -30,50 +30,37 @@
     <div></div>
   </div>
   <div id="nav-type">
-    <div>Features</div>
+    <div>Tags</div>
   </div>
   <div id="nav-date">
-    <div>2026-01-12 12:38:25 PM</div>
+    <div>2026-01-12 12:13:35 PM</div>
   </div>
 </div>
 
       </div>
       <div id="content">
         <div class="page-heading alert alert-primary">
-          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
-          <a href="karate-timeline.html">Timeline</a>
+          <a href="karate-summary.html">Summary</a>
         </div>
-        <table class="features-table table table-sm">
+        <table class="tags-table table table-sm ">
           <thead>
             <tr>
-              <th>Feature</th>
-              <th>Title</th>
-              <th class="num">Passed</th>
-              <th class="num">Failed</th>
-              <th class="num">Scenarios</th>
-              <th class="num">Time (ms)</th>
+              <th class="feature-cell">Feature</th>
+              <th classapend="passed">smoke</th>
             </tr>
           </thead>
           <tbody>
             <tr class="passed">
-              <td>
+              <td class="feature-cell">
                 <a href="account.account.html">account/account.feature</a>
               </td>
-              <td>Account - Testar os endpoints da conta</td>
-              <td class="num">2</td>
-              <td class="num">0</td>
-              <td class="num">2</td>
-              <td class="num">5627</td>
+              <td classapend="passed">X</td>
             </tr>
             <tr class="passed">
-              <td>
+              <td class="feature-cell">
                 <a href="bookstore.bookstore.html">bookstore/bookstore.feature</a>
               </td>
-              <td>Bookstore - Testar os endpoints da loja de livros</td>
-              <td class="num">2</td>
-              <td class="num">0</td>
-              <td class="num">2</td>
-              <td class="num">3567</td>
+              <td classapend="passed">X</td>
             </tr>
           </tbody>
         </table>
