@@ -38,7 +38,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">2</div>
+      <div id="nav-pass" class="bg-success">4</div>
       <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
@@ -49,7 +49,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2026-01-12 12:38:25 PM</div>
+    <div>2026-01-12 01:24:31 PM</div>
   </div>
 </div>
 
@@ -59,6 +59,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           </div>
           <div class="nav-item passed">
             <a href="#[4:62]"><span>[4:62]</span> <span>Buscar livro por ISBN com sucesso</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[5:76]"><span>[5:76]</span> <span>Buscar livro por ISBN (falha)</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[6:85]"><span>[6:85]</span> <span>Atualizar ISBN de um livro com sucesso</span></a>
           </div>
         </div>
       </div>
@@ -84,7 +90,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>3017</span>
+              <span>ms:</span>&nbsp;<span>3267</span>
             </div>
           </div>
           <div class="step-row">
@@ -107,7 +113,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def auth = callonce read(&#39;classpath:auth/auth.feature&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">2496</div>
+    <div class="time-cell passed">2739</div>
   </div>
 
    
@@ -116,7 +122,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">12:38:24.335 &lt;&lt; lock released, cached callonce: read(&#39;classpath:auth/auth.feature&#39;)
+  <div class="preformatted" data-parent="0.4">13:24:29.121 &lt;&lt; lock released, cached callonce: read(&#39;classpath:auth/auth.feature&#39;)
 </div>   
 
   <div>
@@ -127,7 +133,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <div class="step-indent"></div>
         <div class="step-cell passed">auth.auth</div>
       </div>
-      <div class="time-cell passed">2489</div>
+      <div class="time-cell passed">2730</div>
     </div>
     <div>
       <div><div>
@@ -143,7 +149,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def userName = &#39;usuario_&#39; + java.util.UUID.randomUUID()</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -152,8 +158,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4.0.call.0.5">12:38:21.829 karate.env system property was: null 
-12:38:21.829 &gt;&gt; lock acquired, begin callonce: read(&#39;classpath:auth/auth.feature&#39;)
+  <div class="preformatted" data-parent="0.4.0.call.0.5">13:24:26.383 karate.env system property was: null 
+13:24:26.387 &gt;&gt; lock acquired, begin callonce: read(&#39;classpath:auth/auth.feature&#39;)
 </div>   
 
   
@@ -260,7 +266,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">1144</div>
+    <div class="time-cell passed">1288</div>
   </div>
 
    
@@ -269,7 +275,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4.0.call.0.18">12:38:21.845 request:
+  <div class="preformatted" data-parent="0.4.0.call.0.18">13:24:26.397 request:
 1 &gt; POST https://bookstore.toolsqa.com/Account/v1/User
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 82
@@ -277,18 +283,18 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;userName&quot;:&quot;usuario_407c6500-a7b2-4e74-ac2c-383356185656&quot;,&quot;password&quot;:&quot;@Senha123&quot;}
+{&quot;userName&quot;:&quot;usuario_3e38688d-f821-476c-a0f3-5ecd1f24e495&quot;,&quot;password&quot;:&quot;@Senha123&quot;}
 
-12:38:22.981 response time in milliseconds: 1136
+13:24:27.683 response time in milliseconds: 1284
 1 &lt; 201
 1 &lt; Server: nginx/1.17.10 (Ubuntu)
-1 &lt; Date: Mon, 12 Jan 2026 15:38:22 GMT
+1 &lt; Date: Mon, 12 Jan 2026 16:24:27 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 118
 1 &lt; Connection: keep-alive
 1 &lt; X-Powered-By: Express
-1 &lt; ETag: W/&quot;76-BcQW9AwQwLMnDOoTH3oXjkUP0MA&quot;
-{&quot;userID&quot;:&quot;a4f80fd7-fad5-46ef-94e8-bd26c29595d8&quot;,&quot;username&quot;:&quot;usuario_407c6500-a7b2-4e74-ac2c-383356185656&quot;,&quot;books&quot;:[]}
+1 &lt; ETag: W/&quot;76-XEzBMa+BWKxIVxphYg7nxhGB3tU&quot;
+{&quot;userID&quot;:&quot;d73796fb-d8e7-4d38-a961-b88e070dd4ad&quot;,&quot;username&quot;:&quot;usuario_3e38688d-f821-476c-a0f3-5ecd1f24e495&quot;,&quot;books&quot;:[]}
 
 </div>   
 
@@ -337,7 +343,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def userID = response.userID</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -424,7 +430,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">1337</div>
+    <div class="time-cell passed">1433</div>
   </div>
 
    
@@ -433,7 +439,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4.0.call.0.33">12:38:22.997 request:
+  <div class="preformatted" data-parent="0.4.0.call.0.33">13:24:27.686 request:
 2 &gt; POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
 2 &gt; Content-Type: application/json; charset=UTF-8
 2 &gt; Content-Length: 82
@@ -441,18 +447,18 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 2 &gt; Connection: Keep-Alive
 2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
 2 &gt; Accept-Encoding: gzip,deflate
-{&quot;userName&quot;:&quot;usuario_407c6500-a7b2-4e74-ac2c-383356185656&quot;,&quot;password&quot;:&quot;@Senha123&quot;}
+{&quot;userName&quot;:&quot;usuario_3e38688d-f821-476c-a0f3-5ecd1f24e495&quot;,&quot;password&quot;:&quot;@Senha123&quot;}
 
-12:38:24.332 response time in milliseconds: 1334
+13:24:29.118 response time in milliseconds: 1431
 2 &lt; 200
 2 &lt; Server: nginx/1.17.10 (Ubuntu)
-2 &lt; Date: Mon, 12 Jan 2026 15:38:23 GMT
+2 &lt; Date: Mon, 12 Jan 2026 16:24:28 GMT
 2 &lt; Content-Type: application/json; charset=utf-8
 2 &lt; Content-Length: 322
 2 &lt; Connection: keep-alive
 2 &lt; X-Powered-By: Express
-2 &lt; ETag: W/&quot;142-uz6diTD+4M3cAAj0zN5h4PBSJis&quot;
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fNDA3YzY1MDAtYTdiMi00ZTc0LWFjMmMtMzgzMzU2MTg1NjU2IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzIzMDN9.PRZ8Q0VQU4Q8BkQv8B1c3IyJxwhLyL_RyVgfP1d3kEo&quot;,&quot;expires&quot;:&quot;2026-01-19T15:38:23.118Z&quot;,&quot;status&quot;:&quot;Success&quot;,&quot;result&quot;:&quot;User authorized successfully.&quot;}
+2 &lt; ETag: W/&quot;142-9kzdS5l3GD3v8R4U5HlC8ytGR0c&quot;
+{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fM2UzODY4OGQtZjgyMS00NzZjLWEwZjMtNWVjZDFmMjRlNDk1IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzUwNjd9.QzmeKnxqgZw8MX8uSs-AZIrOZW3WC8mMLQLZVE3XYmA&quot;,&quot;expires&quot;:&quot;2026-01-19T16:24:27.797Z&quot;,&quot;status&quot;:&quot;Success&quot;,&quot;result&quot;:&quot;User authorized successfully.&quot;}
 
 </div>   
 
@@ -646,7 +652,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>Given</span>&nbsp;<span>path &#39;/Bookstore/v1/Books&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -674,7 +680,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">519</div>
+    <div class="time-cell passed">525</div>
   </div>
 
    
@@ -683,7 +689,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.57">12:38:24.337 request:
+  <div class="preformatted" data-parent="0.57">13:24:29.123 request:
 1 &gt; GET https://bookstore.toolsqa.com/Bookstore/v1/Books
 1 &gt; Host: bookstore.toolsqa.com
 1 &gt; Connection: Keep-Alive
@@ -691,10 +697,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-12:38:24.853 response time in milliseconds: 500
+13:24:29.648 response time in milliseconds: 523
 1 &lt; 200
 1 &lt; Server: nginx/1.17.10 (Ubuntu)
-1 &lt; Date: Mon, 12 Jan 2026 15:38:24 GMT
+1 &lt; Date: Mon, 12 Jan 2026 16:24:29 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 4514
 1 &lt; Connection: keep-alive
@@ -778,7 +784,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>550</span>
+              <span>ms:</span>&nbsp;<span>526</span>
             </div>
           </div>
           <div class="step-row">
@@ -810,7 +816,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">12:38:24.853 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">13:24:29.657 karate.env system property was: null 
 </div>   
 
   
@@ -886,7 +892,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def auth = callonce read(&#39;classpath:auth/auth.feature&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -914,7 +920,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def token = auth.token</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -942,7 +948,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def userID = auth.userID</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -970,7 +976,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def isbn = &#39;9781449325862&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1054,7 +1060,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + token</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1082,7 +1088,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">544</div>
+    <div class="time-cell passed">516</div>
   </div>
 
    
@@ -1091,19 +1097,19 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.71">12:38:24.869 request:
+  <div class="preformatted" data-parent="0.71">13:24:29.670 request:
 1 &gt; GET https://bookstore.toolsqa.com/Bookstore/v1/Book?ISBN=9781449325862
-1 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fNDA3YzY1MDAtYTdiMi00ZTc0LWFjMmMtMzgzMzU2MTg1NjU2IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzIzMDN9.PRZ8Q0VQU4Q8BkQv8B1c3IyJxwhLyL_RyVgfP1d3kEo
+1 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fM2UzODY4OGQtZjgyMS00NzZjLWEwZjMtNWVjZDFmMjRlNDk1IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzUwNjd9.QzmeKnxqgZw8MX8uSs-AZIrOZW3WC8mMLQLZVE3XYmA
 1 &gt; Host: bookstore.toolsqa.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-12:38:25.397 response time in milliseconds: 528
+13:24:30.180 response time in milliseconds: 510
 1 &lt; 200
 1 &lt; Server: nginx/1.17.10 (Ubuntu)
-1 &lt; Date: Mon, 12 Jan 2026 15:38:25 GMT
+1 &lt; Date: Mon, 12 Jan 2026 16:24:29 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 549
 1 &lt; Connection: keep-alive
@@ -1159,6 +1165,753 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       </div>
     </div>
     <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5:76]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">smoke</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5:76]</span>
+                <span class="scenario-name">Buscar livro por ISBN (falha)</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>1042</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5:76]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5:76]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def auth = callonce read(&#39;classpath:auth/auth.feature&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">13:24:30.180 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:76]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def token = auth.token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:76]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def isbn = &#39;0000000000&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.79">
+      <div class="step-ref passed">79</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/Bookstore/v1/Book&#39;, isbn</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.80">
+      <div class="step-ref passed">80</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1035</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.80">13:24:30.197 request:
+1 &gt; GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+1 &gt; Host: bookstore.toolsqa.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+13:24:30.714 request:
+2 &gt; GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+2 &gt; Host: bookstore.toolsqa.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+13:24:30.884 request:
+3 &gt; GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+3 &gt; Host: bookstore.toolsqa.com
+3 &gt; Connection: Keep-Alive
+3 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+3 &gt; Accept-Encoding: gzip,deflate
+
+
+13:24:31.229 response time in milliseconds: 176
+3 &lt; 200
+3 &lt; Server: nginx/1.17.10 (Ubuntu)
+3 &lt; Date: Mon, 12 Jan 2026 16:24:30 GMT
+3 &lt; Content-Type: text/html; charset=utf-8
+3 &lt; Transfer-Encoding: chunked
+3 &lt; Connection: keep-alive
+3 &lt; X-Powered-By: Express
+3 &lt; ETag: W/&quot;c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs&quot;
+
+&lt;!-- HTML for static distribution bundle build --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Swagger UI&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./swagger-ui.css&quot; &gt;
+  &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;./favicon-32x32.png&quot; sizes=&quot;32x32&quot; /&gt;&lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;./favicon-16x16.png&quot; sizes=&quot;16x16&quot; /&gt;
+  &lt;style&gt;
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; style=&quot;position:absolute;width:0;height:0&quot;&gt;
+  &lt;defs&gt;
+    &lt;symbol viewBox=&quot;0 0 20 20&quot; id=&quot;unlocked&quot;&gt;
+      &lt;path d=&quot;M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z&quot;&gt;&lt;/path&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox=&quot;0 0 20 20&quot; id=&quot;locked&quot;&gt;
+      &lt;path d=&quot;M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z&quot;/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox=&quot;0 0 20 20&quot; id=&quot;close&quot;&gt;
+      &lt;path d=&quot;M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z&quot;/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox=&quot;0 0 20 20&quot; id=&quot;large-arrow&quot;&gt;
+      &lt;path d=&quot;M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z&quot;/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox=&quot;0 0 20 20&quot; id=&quot;large-arrow-down&quot;&gt;
+      &lt;path d=&quot;M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z&quot;/&gt;
+    &lt;/symbol&gt;
+
+
+    &lt;symbol viewBox=&quot;0 0 24 24&quot; id=&quot;jump-to&quot;&gt;
+      &lt;path d=&quot;M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z&quot;/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox=&quot;0 0 24 24&quot; id=&quot;expand&quot;&gt;
+      &lt;path d=&quot;M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z&quot;/&gt;
+    &lt;/symbol&gt;
+
+  &lt;/defs&gt;
+&lt;/svg&gt;
+
+&lt;div id=&quot;swagger-ui&quot;&gt;&lt;/div&gt;
+
+&lt;script src=&quot;./swagger-ui-bundle.js&quot;&gt; &lt;/script&gt;
+&lt;script src=&quot;./swagger-ui-standalone-preset.js&quot;&gt; &lt;/script&gt;
+&lt;script src=&quot;./swagger-ui-init.js&quot;&gt; &lt;/script&gt;
+
+
+
+&lt;style&gt;
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+&lt;/style&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[6:85]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">smoke</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[6:85]</span>
+                <span class="scenario-name">Atualizar ISBN de um livro com sucesso</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>519</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[6:85]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[6:85]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def auth = callonce read(&#39;classpath:auth/auth.feature&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">13:24:31.236 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[6:85]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def token = auth.token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[6:85]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def auth = callonce read(&#39;classpath:auth/auth.feature&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def token = auth.token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.88">
+      <div class="step-ref passed">88</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def userID = auth.userID</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.90">
+      <div class="step-ref passed">90</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def oldISBN = &#39;9781449325862&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.91">
+      <div class="step-ref passed">91</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def newISBN = &#39;9781449331821&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.93">
+      <div class="step-ref passed">93</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://bookstore.toolsqa.com/BookStore/v1/Books/&#39; + oldISBN</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.94">
+      <div class="step-ref passed">94</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.95">
+      <div class="step-ref passed">95</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {&quot;userID&quot;: userID, &quot;isbn&quot;: newISBN}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.96">
+      <div class="step-ref passed">96</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method put</span>
+      </div>
+    </div>
+    <div class="time-cell passed">513</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.96">13:24:31.245 request:
+1 &gt; PUT https://bookstore.toolsqa.com/BookStore/v1/Books/9781449325862
+1 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fM2UzODY4OGQtZjgyMS00NzZjLWEwZjMtNWVjZDFmMjRlNDk1IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzUwNjd9.QzmeKnxqgZw8MX8uSs-AZIrOZW3WC8mMLQLZVE3XYmA
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 36
+1 &gt; Host: bookstore.toolsqa.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;userID&quot;:&quot;userID&quot;,&quot;isbn&quot;:&quot;newISBN&quot;}
+
+13:24:31.748 response time in milliseconds: 503
+1 &lt; 400
+1 &lt; Server: nginx/1.17.10 (Ubuntu)
+1 &lt; Date: Mon, 12 Jan 2026 16:24:31 GMT
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 52
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; ETag: W/&quot;34-ixxKFxEiXTqp0CZzOZT9G73DzkM&quot;
+{&quot;code&quot;:&quot;1207&quot;,&quot;message&quot;:&quot;Request Body is Invalid!&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.97">
+      <div class="step-ref passed">97</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
   </div>
 
    

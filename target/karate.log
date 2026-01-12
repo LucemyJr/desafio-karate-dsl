@@ -5927,3 +5927,3177 @@ classpath:bookstore/bookstore.feature:52
 {"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"}
 
 12:38:25.557 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) classpath:bookstore/bookstore.feature
+12:52:01.279 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+12:52:01.288 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768233121279
+12:52:01.288 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+12:52:02.424 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:52:02.808 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_5f08ff82-f2d2-4cbe-b95d-b15088542114","password":"@Senha123"}
+
+12:52:04.408 [main] DEBUG com.intuit.karate - response time in milliseconds: 1584
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:52:04 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-1qYWHfRySFNn+7MQeYxdw2iBscY"
+{"userID":"351b7d03-6d29-4119-a17e-f01a7f3e2783","username":"usuario_5f08ff82-f2d2-4cbe-b95d-b15088542114","books":[]}
+
+12:52:04.440 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:52:04.446 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+12:52:04.456 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_cc5d132b-7a01-4d8c-a49d-1b711b4a9e07","password":"@Senha123"}
+
+12:52:05.528 [main] DEBUG com.intuit.karate - response time in milliseconds: 1072
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:52:05 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-WtRt+uNslcLTsmlnXVXkFawOwuY"
+{"userID":"20ea2569-a8d4-4b69-9b96-f512fd03701f","username":"usuario_cc5d132b-7a01-4d8c-a49d-1b711b4a9e07","books":[]}
+
+12:52:05.544 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_cc5d132b-7a01-4d8c-a49d-1b711b4a9e07","password":"@Senha123"}
+
+12:52:06.831 [main] DEBUG com.intuit.karate - response time in milliseconds: 1287
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 15:52:06 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-pNcN/V+Hu4yVeEt9vjhc1Z+LKxY"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fY2M1ZDEzMmItN2EwMS00ZDhjLWE0OWQtMWI3MTFiNGE5ZTA3IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzMxMjV9.6ZfO1J0W5nedMruwkVJdtvWGNTElU9vbnID4B8NjWes","expires":"2026-01-19T15:52:05.658Z","status":"Success","result":"User authorized successfully."}
+
+12:52:06.841 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+12:52:06.841 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/20ea2569-a8d4-4b69-9b96-f512fd03701f
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fY2M1ZDEzMmItN2EwMS00ZDhjLWE0OWQtMWI3MTFiNGE5ZTA3IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzMxMjV9.6ZfO1J0W5nedMruwkVJdtvWGNTElU9vbnID4B8NjWes
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:52:08.856 [main] DEBUG com.intuit.karate - response time in milliseconds: 2015
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:52:08 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-qhZKC40E93PeflR3/01vSzBAn6o"
+
+
+12:52:09.504 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:account/account.feature
+12:52:09.512 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:52:09.516 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+12:52:09.523 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_21d82cd8-a5db-4109-ad60-4b61e0d74485","password":"@Senha123"}
+
+12:52:10.436 [main] DEBUG com.intuit.karate - response time in milliseconds: 912
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:52:10 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-eKBGBrPEp1b8VmJnfUHLgtleHs8"
+{"userID":"76b7134d-604c-4d1d-a57b-618a77b1e469","username":"usuario_21d82cd8-a5db-4109-ad60-4b61e0d74485","books":[]}
+
+12:52:10.440 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_21d82cd8-a5db-4109-ad60-4b61e0d74485","password":"@Senha123"}
+
+12:52:11.464 [main] DEBUG com.intuit.karate - response time in milliseconds: 1024
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 15:52:11 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-ZHH2QUQwUpb/1XtKpH4iXA2gwZI"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fMjFkODJjZDgtYTVkYi00MTA5LWFkNjAtNGI2MWUwZDc0NDg1IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzMxMzB9.ZEZtf15VwG5wSBKmGJd5Qy8cz0we-DuZQiRephuscUw","expires":"2026-01-19T15:52:10.565Z","status":"Success","result":"User authorized successfully."}
+
+12:52:11.464 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+12:52:11.464 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Books
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:52:11.977 [main] DEBUG com.intuit.karate - response time in milliseconds: 513
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:52:11 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 4514
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"11a2-8zfX++QwcgaCjSU6F8JP9fUd1tY"
+{"books":[{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"},{"isbn":"9781449331818","title":"Learning JavaScript Design Patterns","subTitle":"A JavaScript and jQuery Developer's Guide","author":"Addy Osmani","publish_date":"2020-06-04T09:11:40.000Z","publisher":"O'Reilly Media","pages":254,"description":"With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-da","website":"http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"},{"isbn":"9781449337711","title":"Designing Evolvable Web APIs with ASP.NET","subTitle":"Harnessing the Power of the Web","author":"Glenn Block et al.","publish_date":"2020-06-04T09:12:43.000Z","publisher":"O'Reilly Media","pages":238,"description":"Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft","website":"http://chimera.labs.oreilly.com/books/1234000001708/index.html"},{"isbn":"9781449365035","title":"Speaking JavaScript","subTitle":"An In-Depth Guide for Programmers","author":"Axel Rauschmayer","publish_date":"2014-02-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":460,"description":"Like it or not, JavaScript is everywhere these days-from browser to server to mobile-and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who o","website":"http://speakingjs.com/"},{"isbn":"9781491904244","title":"You Don't Know JS","subTitle":"ES6 & Beyond","author":"Kyle Simpson","publish_date":"2015-12-27T00:00:00.000Z","publisher":"O'Reilly Media","pages":278,"description":"No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the \\\"You Don’t Know JS\\\" series, this compact guide focuses on new features available in ECMAScript 6 (ES6), the latest version of the st","website":"https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20&%20beyond"},{"isbn":"9781491950296","title":"Programming JavaScript Applications","subTitle":"Robust Web Architecture with Node, HTML5, and Modern JS Libraries","author":"Eric Elliott","publish_date":"2014-07-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":254,"description":"Take advantage of JavaScript's power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flex","website":"http://chimera.labs.oreilly.com/books/1234000000262/index.html"},{"isbn":"9781593275846","title":"Eloquent JavaScript, Second Edition","subTitle":"A Modern Introduction to Programming","author":"Marijn Haverbeke","publish_date":"2014-12-14T00:00:00.000Z","publisher":"No Starch Press","pages":472,"description":"JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale ","website":"http://eloquentjavascript.net/"},{"isbn":"9781593277574","title":"Understanding ECMAScript 6","subTitle":"The Definitive Guide for JavaScript Developers","author":"Nicholas C. Zakas","publish_date":"2016-09-03T00:00:00.000Z","publisher":"No Starch Press","pages":352,"description":"ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that E","website":"https://leanpub.com/understandinges6/read"}]}
+
+12:52:11.992 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:52:11.992 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+12:52:11.992 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+12:52:11.992 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book?ISBN=9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fMjFkODJjZDgtYTVkYi00MTA5LWFkNjAtNGI2MWUwZDc0NDg1IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzMxMzB9.ZEZtf15VwG5wSBKmGJd5Qy8cz0we-DuZQiRephuscUw
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:52:12.536 [main] DEBUG com.intuit.karate - response time in milliseconds: 544
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:52:12 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 549
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"225-6wegpsdSbs3Zjpo/5fzJQey1dRQ"
+{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"}
+
+12:52:12.536 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:52:12.553 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Booktore/v1/Book/0000000000
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:52:13.064 [main] DEBUG com.intuit.karate - request:
+2 > GET https://bookstore.toolsqa.com/Booktore/v1/Book/0000000000
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+
+
+12:52:13.224 [main] DEBUG com.intuit.karate - request:
+3 > GET https://bookstore.toolsqa.com/Booktore/v1/Book/0000000000
+3 > Host: bookstore.toolsqa.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+3 > Accept-Encoding: gzip,deflate
+
+
+12:52:13.575 [main] DEBUG com.intuit.karate - response time in milliseconds: 177
+3 < 200
+3 < Server: nginx/1.17.10 (Ubuntu)
+3 < Date: Mon, 12 Jan 2026 15:52:13 GMT
+3 < Content-Type: text/html; charset=utf-8
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < ETag: W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"
+
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+
+
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<div id="swagger-ui"></div>
+
+<script src="./swagger-ui-bundle.js"> </script>
+<script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="./swagger-ui-init.js"> </script>
+
+
+
+<style>
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+</style>
+</body>
+
+</html>
+
+
+12:52:13.576 [main] ERROR com.intuit.karate - classpath:bookstore/bookstore.feature:81
+Then status 404
+status code was: 200, expected: 404, response time in milliseconds: 177, url: https://bookstore.toolsqa.com/Booktore/v1/Book/0000000000, response: 
+
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+
+
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<div id="swagger-ui"></div>
+
+<script src="./swagger-ui-bundle.js"> </script>
+<script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="./swagger-ui-init.js"> </script>
+
+
+
+<style>
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+</style>
+</body>
+
+</html>
+
+classpath:bookstore/bookstore.feature:81
+12:52:13.721 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:bookstore/bookstore.feature
+12:53:09.274 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+12:53:09.274 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768233189274
+12:53:09.290 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+12:53:10.314 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:53:10.650 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_b4b246aa-9a71-40b1-ab95-e6062b513d17","password":"@Senha123"}
+
+12:53:11.722 [main] DEBUG com.intuit.karate - response time in milliseconds: 1071
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:53:11 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-VOjOOe8sQmTa1Q7/YgLAWAZB3LI"
+{"userID":"05666f0c-4fa6-4ec7-b556-81d5b6fad49d","username":"usuario_b4b246aa-9a71-40b1-ab95-e6062b513d17","books":[]}
+
+12:53:11.738 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:53:11.738 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+12:53:11.754 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_0f90fa06-7cf9-4b4b-b019-e65e37f9e2f6","password":"@Senha123"}
+
+12:53:12.794 [main] DEBUG com.intuit.karate - response time in milliseconds: 1040
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:53:12 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-TGcUYF+u6zTBwh5l2yiYOgN1Jjw"
+{"userID":"f3227d02-9a8d-42a2-ab16-63356bc02fff","username":"usuario_0f90fa06-7cf9-4b4b-b019-e65e37f9e2f6","books":[]}
+
+12:53:12.794 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_0f90fa06-7cf9-4b4b-b019-e65e37f9e2f6","password":"@Senha123"}
+
+12:53:13.962 [main] DEBUG com.intuit.karate - response time in milliseconds: 1168
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 15:53:13 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-uhKLGQbSNy9LZ1QX6J9W0qAcHUw"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fMGY5MGZhMDYtN2NmOS00YjRiLWIwMTktZTY1ZTM3ZjllMmY2IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzMxOTJ9.KZD5NZ0MKO2E-OEgfelhz0lEEBV3geI_5oPOCxf6O0A","expires":"2026-01-19T15:53:12.918Z","status":"Success","result":"User authorized successfully."}
+
+12:53:13.978 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+12:53:13.978 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/f3227d02-9a8d-42a2-ab16-63356bc02fff
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fMGY5MGZhMDYtN2NmOS00YjRiLWIwMTktZTY1ZTM3ZjllMmY2IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzMxOTJ9.KZD5NZ0MKO2E-OEgfelhz0lEEBV3geI_5oPOCxf6O0A
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:53:16.074 [main] DEBUG com.intuit.karate - response time in milliseconds: 2096
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:53:15 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-rm3PEiYQ+4kbXfcQeT7sQIIjnb8"
+
+
+12:53:16.698 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:account/account.feature
+12:53:16.714 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:53:16.714 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+12:53:16.714 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_48bb13af-918d-4f07-aa1c-6081e0402e48","password":"@Senha123"}
+
+12:53:18.061 [main] DEBUG com.intuit.karate - response time in milliseconds: 1347
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:53:17 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-eY9mj0W4Yw+sMxy8OTI2Ha2zLoU"
+{"userID":"c9a4764c-051f-4179-985a-fbac2124ed07","username":"usuario_48bb13af-918d-4f07-aa1c-6081e0402e48","books":[]}
+
+12:53:18.061 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_48bb13af-918d-4f07-aa1c-6081e0402e48","password":"@Senha123"}
+
+12:53:19.786 [main] DEBUG com.intuit.karate - response time in milliseconds: 1725
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 15:53:19 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-AvjG224ke9DD/oQ8n1tcDoqQ9D8"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fNDhiYjEzYWYtOTE4ZC00ZjA3LWFhMWMtNjA4MWUwNDAyZTQ4IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzMxOTh9.ckqP4plcn8ksx7dqgRO13QshiDgIK6XdMwfiARnJ0Ok","expires":"2026-01-19T15:53:18.195Z","status":"Success","result":"User authorized successfully."}
+
+12:53:19.786 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+12:53:19.786 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Books
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:53:20.307 [main] DEBUG com.intuit.karate - response time in milliseconds: 521
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:53:19 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 4514
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"11a2-8zfX++QwcgaCjSU6F8JP9fUd1tY"
+{"books":[{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"},{"isbn":"9781449331818","title":"Learning JavaScript Design Patterns","subTitle":"A JavaScript and jQuery Developer's Guide","author":"Addy Osmani","publish_date":"2020-06-04T09:11:40.000Z","publisher":"O'Reilly Media","pages":254,"description":"With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-da","website":"http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"},{"isbn":"9781449337711","title":"Designing Evolvable Web APIs with ASP.NET","subTitle":"Harnessing the Power of the Web","author":"Glenn Block et al.","publish_date":"2020-06-04T09:12:43.000Z","publisher":"O'Reilly Media","pages":238,"description":"Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft","website":"http://chimera.labs.oreilly.com/books/1234000001708/index.html"},{"isbn":"9781449365035","title":"Speaking JavaScript","subTitle":"An In-Depth Guide for Programmers","author":"Axel Rauschmayer","publish_date":"2014-02-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":460,"description":"Like it or not, JavaScript is everywhere these days-from browser to server to mobile-and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who o","website":"http://speakingjs.com/"},{"isbn":"9781491904244","title":"You Don't Know JS","subTitle":"ES6 & Beyond","author":"Kyle Simpson","publish_date":"2015-12-27T00:00:00.000Z","publisher":"O'Reilly Media","pages":278,"description":"No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the \\\"You Don’t Know JS\\\" series, this compact guide focuses on new features available in ECMAScript 6 (ES6), the latest version of the st","website":"https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20&%20beyond"},{"isbn":"9781491950296","title":"Programming JavaScript Applications","subTitle":"Robust Web Architecture with Node, HTML5, and Modern JS Libraries","author":"Eric Elliott","publish_date":"2014-07-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":254,"description":"Take advantage of JavaScript's power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flex","website":"http://chimera.labs.oreilly.com/books/1234000000262/index.html"},{"isbn":"9781593275846","title":"Eloquent JavaScript, Second Edition","subTitle":"A Modern Introduction to Programming","author":"Marijn Haverbeke","publish_date":"2014-12-14T00:00:00.000Z","publisher":"No Starch Press","pages":472,"description":"JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale ","website":"http://eloquentjavascript.net/"},{"isbn":"9781593277574","title":"Understanding ECMAScript 6","subTitle":"The Definitive Guide for JavaScript Developers","author":"Nicholas C. Zakas","publish_date":"2016-09-03T00:00:00.000Z","publisher":"No Starch Press","pages":352,"description":"ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that E","website":"https://leanpub.com/understandinges6/read"}]}
+
+12:53:20.314 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:53:20.314 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+12:53:20.314 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+12:53:20.314 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book?ISBN=9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fNDhiYjEzYWYtOTE4ZC00ZjA3LWFhMWMtNjA4MWUwNDAyZTQ4IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzMxOTh9.ckqP4plcn8ksx7dqgRO13QshiDgIK6XdMwfiARnJ0Ok
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:53:20.841 [main] DEBUG com.intuit.karate - response time in milliseconds: 527
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:53:20 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 549
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"225-6wegpsdSbs3Zjpo/5fzJQey1dRQ"
+{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"}
+
+12:53:20.841 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:53:20.853 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Booktore/v1/Book/0000000000
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:53:21.338 [main] DEBUG com.intuit.karate - request:
+2 > GET https://bookstore.toolsqa.com/Booktore/v1/Book/0000000000
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+
+
+12:53:21.514 [main] DEBUG com.intuit.karate - request:
+3 > GET https://bookstore.toolsqa.com/Booktore/v1/Book/0000000000
+3 > Host: bookstore.toolsqa.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+3 > Accept-Encoding: gzip,deflate
+
+
+12:53:21.834 [main] DEBUG com.intuit.karate - response time in milliseconds: 160
+3 < 200
+3 < Server: nginx/1.17.10 (Ubuntu)
+3 < Date: Mon, 12 Jan 2026 15:53:21 GMT
+3 < Content-Type: text/html; charset=utf-8
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < ETag: W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"
+
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+
+
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<div id="swagger-ui"></div>
+
+<script src="./swagger-ui-bundle.js"> </script>
+<script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="./swagger-ui-init.js"> </script>
+
+
+
+<style>
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+</style>
+</body>
+
+</html>
+
+
+12:53:21.834 [main] ERROR com.intuit.karate - classpath:bookstore/bookstore.feature:82
+* match response.message contains 'Book not found'
+match failed: CONTAINS
+  $ | data types don't match (NULL:STRING)
+  null
+  'Book not found'
+
+
+classpath:bookstore/bookstore.feature:82
+12:53:21.962 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:bookstore/bookstore.feature
+12:53:37.157 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+12:53:37.162 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768233217160
+12:53:37.168 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+12:53:38.272 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:53:38.669 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_ed6b6386-3aa1-4315-b3be-dadcabe6d6d5","password":"@Senha123"}
+
+12:53:40.018 [main] DEBUG com.intuit.karate - response time in milliseconds: 1344
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:53:39 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-SW0T5JydLemTzHIRSK59YGIv0bY"
+{"userID":"ee375738-0bd8-4e98-8179-5ef03d672a34","username":"usuario_ed6b6386-3aa1-4315-b3be-dadcabe6d6d5","books":[]}
+
+12:53:40.051 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:53:40.057 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+12:53:40.061 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_ade5e3ea-562c-4284-b675-4b42c8550d85","password":"@Senha123"}
+
+12:53:40.899 [main] DEBUG com.intuit.karate - response time in milliseconds: 838
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:53:40 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-gm7cmTyoDQ1RQY1lCgg9hFwPELg"
+{"userID":"2d022585-3e3c-4e78-91f3-5638908ff961","username":"usuario_ade5e3ea-562c-4284-b675-4b42c8550d85","books":[]}
+
+12:53:40.899 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_ade5e3ea-562c-4284-b675-4b42c8550d85","password":"@Senha123"}
+
+12:53:42.173 [main] DEBUG com.intuit.karate - response time in milliseconds: 1274
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 15:53:41 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-NxMA1LJy/TwqyGHGfKRaPuI8hFM"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fYWRlNWUzZWEtNTYyYy00Mjg0LWI2NzUtNGI0MmM4NTUwZDg1IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzMyMjF9.C6U4wj1FJ9cO3KAWtYlf_uARoyiYlkQY7hjQV1ALS3k","expires":"2026-01-19T15:53:41.025Z","status":"Success","result":"User authorized successfully."}
+
+12:53:42.178 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+12:53:42.189 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/2d022585-3e3c-4e78-91f3-5638908ff961
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fYWRlNWUzZWEtNTYyYy00Mjg0LWI2NzUtNGI0MmM4NTUwZDg1IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzMyMjF9.C6U4wj1FJ9cO3KAWtYlf_uARoyiYlkQY7hjQV1ALS3k
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:53:43.586 [main] DEBUG com.intuit.karate - response time in milliseconds: 1397
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:53:43 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-KxSkII/Gp0w4Y9XIDe3io0wjKIc"
+
+
+12:53:44.146 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:account/account.feature
+12:53:44.157 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:53:44.163 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+12:53:44.170 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_01d3bb5c-b268-40e4-abc1-97c237ba66ea","password":"@Senha123"}
+
+12:53:45.266 [main] DEBUG com.intuit.karate - response time in milliseconds: 1096
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:53:44 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-p9SOfWNVIENSbHBEvLEiJ2blZQw"
+{"userID":"e84d4310-1519-4ecd-bdd3-b7cc071a9281","username":"usuario_01d3bb5c-b268-40e4-abc1-97c237ba66ea","books":[]}
+
+12:53:45.266 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_01d3bb5c-b268-40e4-abc1-97c237ba66ea","password":"@Senha123"}
+
+12:53:46.724 [main] DEBUG com.intuit.karate - response time in milliseconds: 1457
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 15:53:46 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-c+6UN+ABM/jY3FjXDVaRJNr3QmQ"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fMDFkM2JiNWMtYjI2OC00MGU0LWFiYzEtOTdjMjM3YmE2NmVhIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzMyMjV9.X9jnZWcWuWX5qkXOvcltzSN4riPMVzPu3xPk2c8ouaY","expires":"2026-01-19T15:53:45.397Z","status":"Success","result":"User authorized successfully."}
+
+12:53:46.726 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+12:53:46.728 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Books
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:53:47.250 [main] DEBUG com.intuit.karate - response time in milliseconds: 522
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:53:46 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 4514
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"11a2-8zfX++QwcgaCjSU6F8JP9fUd1tY"
+{"books":[{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"},{"isbn":"9781449331818","title":"Learning JavaScript Design Patterns","subTitle":"A JavaScript and jQuery Developer's Guide","author":"Addy Osmani","publish_date":"2020-06-04T09:11:40.000Z","publisher":"O'Reilly Media","pages":254,"description":"With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-da","website":"http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"},{"isbn":"9781449337711","title":"Designing Evolvable Web APIs with ASP.NET","subTitle":"Harnessing the Power of the Web","author":"Glenn Block et al.","publish_date":"2020-06-04T09:12:43.000Z","publisher":"O'Reilly Media","pages":238,"description":"Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft","website":"http://chimera.labs.oreilly.com/books/1234000001708/index.html"},{"isbn":"9781449365035","title":"Speaking JavaScript","subTitle":"An In-Depth Guide for Programmers","author":"Axel Rauschmayer","publish_date":"2014-02-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":460,"description":"Like it or not, JavaScript is everywhere these days-from browser to server to mobile-and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who o","website":"http://speakingjs.com/"},{"isbn":"9781491904244","title":"You Don't Know JS","subTitle":"ES6 & Beyond","author":"Kyle Simpson","publish_date":"2015-12-27T00:00:00.000Z","publisher":"O'Reilly Media","pages":278,"description":"No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the \\\"You Don’t Know JS\\\" series, this compact guide focuses on new features available in ECMAScript 6 (ES6), the latest version of the st","website":"https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20&%20beyond"},{"isbn":"9781491950296","title":"Programming JavaScript Applications","subTitle":"Robust Web Architecture with Node, HTML5, and Modern JS Libraries","author":"Eric Elliott","publish_date":"2014-07-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":254,"description":"Take advantage of JavaScript's power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flex","website":"http://chimera.labs.oreilly.com/books/1234000000262/index.html"},{"isbn":"9781593275846","title":"Eloquent JavaScript, Second Edition","subTitle":"A Modern Introduction to Programming","author":"Marijn Haverbeke","publish_date":"2014-12-14T00:00:00.000Z","publisher":"No Starch Press","pages":472,"description":"JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale ","website":"http://eloquentjavascript.net/"},{"isbn":"9781593277574","title":"Understanding ECMAScript 6","subTitle":"The Definitive Guide for JavaScript Developers","author":"Nicholas C. Zakas","publish_date":"2016-09-03T00:00:00.000Z","publisher":"No Starch Press","pages":352,"description":"ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that E","website":"https://leanpub.com/understandinges6/read"}]}
+
+12:53:47.265 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:53:47.268 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+12:53:47.269 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+12:53:47.274 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book?ISBN=9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fMDFkM2JiNWMtYjI2OC00MGU0LWFiYzEtOTdjMjM3YmE2NmVhIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzMyMjV9.X9jnZWcWuWX5qkXOvcltzSN4riPMVzPu3xPk2c8ouaY
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:53:47.773 [main] DEBUG com.intuit.karate - response time in milliseconds: 499
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 15:53:47 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 549
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"225-6wegpsdSbs3Zjpo/5fzJQey1dRQ"
+{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"}
+
+12:53:47.778 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:53:47.778 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Booktore/v1/Book/0000000000
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:53:48.290 [main] DEBUG com.intuit.karate - request:
+2 > GET https://bookstore.toolsqa.com/Booktore/v1/Book/0000000000
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+
+
+12:53:48.469 [main] DEBUG com.intuit.karate - request:
+3 > GET https://bookstore.toolsqa.com/Booktore/v1/Book/0000000000
+3 > Host: bookstore.toolsqa.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+3 > Accept-Encoding: gzip,deflate
+
+
+12:53:48.809 [main] DEBUG com.intuit.karate - response time in milliseconds: 168
+3 < 200
+3 < Server: nginx/1.17.10 (Ubuntu)
+3 < Date: Mon, 12 Jan 2026 15:53:48 GMT
+3 < Content-Type: text/html; charset=utf-8
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < ETag: W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"
+
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+
+
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<div id="swagger-ui"></div>
+
+<script src="./swagger-ui-bundle.js"> </script>
+<script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="./swagger-ui-init.js"> </script>
+
+
+
+<style>
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+</style>
+</body>
+
+</html>
+
+
+12:53:48.941 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) classpath:bookstore/bookstore.feature
+13:00:43.716 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+13:00:43.731 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768233643716
+13:00:43.733 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+13:00:44.885 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:00:45.253 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_36efea0f-5273-4503-8ca5-f5c55c7eea06","password":"@Senha123"}
+
+13:00:47.010 [main] DEBUG com.intuit.karate - response time in milliseconds: 1743
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:00:46 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-t61t6tTgoDxrbGTng+gfPJSzZfA"
+{"userID":"d91f082c-44d9-4d0f-939d-0d97315b073e","username":"usuario_36efea0f-5273-4503-8ca5-f5c55c7eea06","books":[]}
+
+13:00:47.030 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:00:47.030 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:00:47.045 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_8abd912e-eb66-4824-bee9-1d445d3ac1cf","password":"@Senha123"}
+
+13:00:47.941 [main] DEBUG com.intuit.karate - response time in milliseconds: 896
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:00:47 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-9JhM7gRMYj3zDh60res/aKkwxao"
+{"userID":"59250310-1b4a-48fe-82ad-64831589ffa2","username":"usuario_8abd912e-eb66-4824-bee9-1d445d3ac1cf","books":[]}
+
+13:00:47.941 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_8abd912e-eb66-4824-bee9-1d445d3ac1cf","password":"@Senha123"}
+
+13:00:49.381 [main] DEBUG com.intuit.karate - response time in milliseconds: 1440
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:00:49 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-U1LJN1+vET3l0N/6vKiQtoArTss"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fOGFiZDkxMmUtZWI2Ni00ODI0LWJlZTktMWQ0NDVkM2FjMWNmIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzM2NDh9.vw7EK9RuSl2_NFKzllkzH0-v3sNmd8iK6yGCWUC0IpM","expires":"2026-01-19T16:00:48.077Z","status":"Success","result":"User authorized successfully."}
+
+13:00:49.412 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:00:49.412 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/59250310-1b4a-48fe-82ad-64831589ffa2
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fOGFiZDkxMmUtZWI2Ni00ODI0LWJlZTktMWQ0NDVkM2FjMWNmIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzM2NDh9.vw7EK9RuSl2_NFKzllkzH0-v3sNmd8iK6yGCWUC0IpM
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:00:50.885 [main] DEBUG com.intuit.karate - response time in milliseconds: 1473
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:00:50 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-KcWoOQ25Md+AqWsGFN/imgkEvkE"
+
+
+13:00:51.577 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:account/account.feature
+13:00:51.589 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:00:51.589 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:00:51.604 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_963c24e1-218f-40bc-a0bf-54cba50f8299","password":"@Senha123"}
+
+13:00:52.787 [main] DEBUG com.intuit.karate - response time in milliseconds: 1183
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:00:52 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-w6IF9Pue6XmilG2buFmrN09tt7M"
+{"userID":"775883e4-5c2a-46e1-9afd-f86d7cf65fef","username":"usuario_963c24e1-218f-40bc-a0bf-54cba50f8299","books":[]}
+
+13:00:52.789 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_963c24e1-218f-40bc-a0bf-54cba50f8299","password":"@Senha123"}
+
+13:00:53.973 [main] DEBUG com.intuit.karate - response time in milliseconds: 1182
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:00:53 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-PfKKTjsg1rcZ4QpxGqiLLMwoiSk"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fOTYzYzI0ZTEtMjE4Zi00MGJjLWEwYmYtNTRjYmE1MGY4Mjk5IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzM2NTJ9.Err1ju2W607PACZxhEhOxFOL8x7bS3NAeHY42OD2zAc","expires":"2026-01-19T16:00:52.917Z","status":"Success","result":"User authorized successfully."}
+
+13:00:53.973 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:00:53.973 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Books
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:00:54.485 [main] DEBUG com.intuit.karate - response time in milliseconds: 512
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:00:54 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 4514
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"11a2-8zfX++QwcgaCjSU6F8JP9fUd1tY"
+{"books":[{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"},{"isbn":"9781449331818","title":"Learning JavaScript Design Patterns","subTitle":"A JavaScript and jQuery Developer's Guide","author":"Addy Osmani","publish_date":"2020-06-04T09:11:40.000Z","publisher":"O'Reilly Media","pages":254,"description":"With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-da","website":"http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"},{"isbn":"9781449337711","title":"Designing Evolvable Web APIs with ASP.NET","subTitle":"Harnessing the Power of the Web","author":"Glenn Block et al.","publish_date":"2020-06-04T09:12:43.000Z","publisher":"O'Reilly Media","pages":238,"description":"Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft","website":"http://chimera.labs.oreilly.com/books/1234000001708/index.html"},{"isbn":"9781449365035","title":"Speaking JavaScript","subTitle":"An In-Depth Guide for Programmers","author":"Axel Rauschmayer","publish_date":"2014-02-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":460,"description":"Like it or not, JavaScript is everywhere these days-from browser to server to mobile-and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who o","website":"http://speakingjs.com/"},{"isbn":"9781491904244","title":"You Don't Know JS","subTitle":"ES6 & Beyond","author":"Kyle Simpson","publish_date":"2015-12-27T00:00:00.000Z","publisher":"O'Reilly Media","pages":278,"description":"No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the \\\"You Don’t Know JS\\\" series, this compact guide focuses on new features available in ECMAScript 6 (ES6), the latest version of the st","website":"https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20&%20beyond"},{"isbn":"9781491950296","title":"Programming JavaScript Applications","subTitle":"Robust Web Architecture with Node, HTML5, and Modern JS Libraries","author":"Eric Elliott","publish_date":"2014-07-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":254,"description":"Take advantage of JavaScript's power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flex","website":"http://chimera.labs.oreilly.com/books/1234000000262/index.html"},{"isbn":"9781593275846","title":"Eloquent JavaScript, Second Edition","subTitle":"A Modern Introduction to Programming","author":"Marijn Haverbeke","publish_date":"2014-12-14T00:00:00.000Z","publisher":"No Starch Press","pages":472,"description":"JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale ","website":"http://eloquentjavascript.net/"},{"isbn":"9781593277574","title":"Understanding ECMAScript 6","subTitle":"The Definitive Guide for JavaScript Developers","author":"Nicholas C. Zakas","publish_date":"2016-09-03T00:00:00.000Z","publisher":"No Starch Press","pages":352,"description":"ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that E","website":"https://leanpub.com/understandinges6/read"}]}
+
+13:00:54.500 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:00:54.500 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+13:00:54.500 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+13:00:54.516 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book?ISBN=9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fOTYzYzI0ZTEtMjE4Zi00MGJjLWEwYmYtNTRjYmE1MGY4Mjk5IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzM2NTJ9.Err1ju2W607PACZxhEhOxFOL8x7bS3NAeHY42OD2zAc
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:00:55.029 [main] DEBUG com.intuit.karate - response time in milliseconds: 513
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:00:54 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 549
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"225-6wegpsdSbs3Zjpo/5fzJQey1dRQ"
+{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"}
+
+13:00:55.045 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:00:55.059 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:00:55.556 [main] DEBUG com.intuit.karate - request:
+2 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+
+
+13:00:55.717 [main] DEBUG com.intuit.karate - request:
+3 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+3 > Host: bookstore.toolsqa.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+3 > Accept-Encoding: gzip,deflate
+
+
+13:00:56.052 [main] DEBUG com.intuit.karate - response time in milliseconds: 176
+3 < 200
+3 < Server: nginx/1.17.10 (Ubuntu)
+3 < Date: Mon, 12 Jan 2026 16:00:55 GMT
+3 < Content-Type: text/html; charset=utf-8
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < ETag: W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"
+
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+
+
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<div id="swagger-ui"></div>
+
+<script src="./swagger-ui-bundle.js"> </script>
+<script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="./swagger-ui-init.js"> </script>
+
+
+
+<style>
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+</style>
+</body>
+
+</html>
+
+
+13:00:56.052 [main] ERROR com.intuit.karate - classpath:bookstore/bookstore.feature:82
+* match response.code == '1205'
+match failed: EQUALS
+  $ | data types don't match (NULL:STRING)
+  null
+  '1205'
+
+classpath:bookstore/bookstore.feature:82
+13:00:56.275 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:bookstore/bookstore.feature
+13:03:08.294 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+13:03:08.310 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768233788310
+13:03:08.310 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+13:03:09.381 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:03:09.750 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_832f4adc-4517-4983-ba7e-d78689e7da67","password":"@Senha123"}
+
+13:03:11.274 [main] DEBUG com.intuit.karate - response time in milliseconds: 1521
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:03:10 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-zleKiGAvECyhC7REImLNmqbjDo0"
+{"userID":"d8f5d62f-5716-45b8-a321-83ff172292b8","username":"usuario_832f4adc-4517-4983-ba7e-d78689e7da67","books":[]}
+
+13:03:11.286 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:03:11.286 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:03:11.302 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_0da2c32a-b713-41c6-b0f3-00da6c5f8dda","password":"@Senha123"}
+
+13:03:12.198 [main] DEBUG com.intuit.karate - response time in milliseconds: 896
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:03:11 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-qDTpio5hSZqwy+1dmhLdccLRj+4"
+{"userID":"f1bb538b-d3c4-439c-b897-c00dc48a1172","username":"usuario_0da2c32a-b713-41c6-b0f3-00da6c5f8dda","books":[]}
+
+13:03:12.198 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_0da2c32a-b713-41c6-b0f3-00da6c5f8dda","password":"@Senha123"}
+
+13:03:13.398 [main] DEBUG com.intuit.karate - response time in milliseconds: 1200
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:03:13 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-QCKVHA211J+h9Zb2mwNHsWklJnQ"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fMGRhMmMzMmEtYjcxMy00MWM2LWIwZjMtMDBkYTZjNWY4ZGRhIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzM3OTJ9.Ist-OyDH_uMICTddV0rE33VRieSyjHTsNnRThHQrILI","expires":"2026-01-19T16:03:12.332Z","status":"Success","result":"User authorized successfully."}
+
+13:03:13.421 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:03:13.426 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/f1bb538b-d3c4-439c-b897-c00dc48a1172
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fMGRhMmMzMmEtYjcxMy00MWM2LWIwZjMtMDBkYTZjNWY4ZGRhIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzM3OTJ9.Ist-OyDH_uMICTddV0rE33VRieSyjHTsNnRThHQrILI
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:03:14.870 [main] DEBUG com.intuit.karate - response time in milliseconds: 1444
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:03:14 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-26UTxuyPm0WcqQDvDHsCwSRLfCU"
+
+
+13:03:15.510 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:account/account.feature
+13:03:15.526 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:03:15.526 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:03:15.542 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_4adb1250-aabc-4727-85f8-a444ffc85dfe","password":"@Senha123"}
+
+13:03:16.854 [main] DEBUG com.intuit.karate - response time in milliseconds: 1312
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:03:16 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-LCh+zle9AlwE6offM7G00wbL6U4"
+{"userID":"89cb02c2-185a-4c1c-9833-7ca25504faf5","username":"usuario_4adb1250-aabc-4727-85f8-a444ffc85dfe","books":[]}
+
+13:03:16.870 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_4adb1250-aabc-4727-85f8-a444ffc85dfe","password":"@Senha123"}
+
+13:03:18.103 [main] DEBUG com.intuit.karate - response time in milliseconds: 1233
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:03:17 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-KubCRD4AxPdIl3o6rwDYWa+R3iU"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fNGFkYjEyNTAtYWFiYy00NzI3LTg1ZjgtYTQ0NGZmYzg1ZGZlIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzM3OTZ9.yGbRRa8oQYcw9reifbDdDlrFwd2tynJOCw11aGhSSKY","expires":"2026-01-19T16:03:16.990Z","status":"Success","result":"User authorized successfully."}
+
+13:03:18.117 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:03:18.118 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Books
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:03:18.614 [main] DEBUG com.intuit.karate - response time in milliseconds: 496
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:03:18 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 4514
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"11a2-8zfX++QwcgaCjSU6F8JP9fUd1tY"
+{"books":[{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"},{"isbn":"9781449331818","title":"Learning JavaScript Design Patterns","subTitle":"A JavaScript and jQuery Developer's Guide","author":"Addy Osmani","publish_date":"2020-06-04T09:11:40.000Z","publisher":"O'Reilly Media","pages":254,"description":"With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-da","website":"http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"},{"isbn":"9781449337711","title":"Designing Evolvable Web APIs with ASP.NET","subTitle":"Harnessing the Power of the Web","author":"Glenn Block et al.","publish_date":"2020-06-04T09:12:43.000Z","publisher":"O'Reilly Media","pages":238,"description":"Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft","website":"http://chimera.labs.oreilly.com/books/1234000001708/index.html"},{"isbn":"9781449365035","title":"Speaking JavaScript","subTitle":"An In-Depth Guide for Programmers","author":"Axel Rauschmayer","publish_date":"2014-02-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":460,"description":"Like it or not, JavaScript is everywhere these days-from browser to server to mobile-and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who o","website":"http://speakingjs.com/"},{"isbn":"9781491904244","title":"You Don't Know JS","subTitle":"ES6 & Beyond","author":"Kyle Simpson","publish_date":"2015-12-27T00:00:00.000Z","publisher":"O'Reilly Media","pages":278,"description":"No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the \\\"You Don’t Know JS\\\" series, this compact guide focuses on new features available in ECMAScript 6 (ES6), the latest version of the st","website":"https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20&%20beyond"},{"isbn":"9781491950296","title":"Programming JavaScript Applications","subTitle":"Robust Web Architecture with Node, HTML5, and Modern JS Libraries","author":"Eric Elliott","publish_date":"2014-07-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":254,"description":"Take advantage of JavaScript's power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flex","website":"http://chimera.labs.oreilly.com/books/1234000000262/index.html"},{"isbn":"9781593275846","title":"Eloquent JavaScript, Second Edition","subTitle":"A Modern Introduction to Programming","author":"Marijn Haverbeke","publish_date":"2014-12-14T00:00:00.000Z","publisher":"No Starch Press","pages":472,"description":"JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale ","website":"http://eloquentjavascript.net/"},{"isbn":"9781593277574","title":"Understanding ECMAScript 6","subTitle":"The Definitive Guide for JavaScript Developers","author":"Nicholas C. Zakas","publish_date":"2016-09-03T00:00:00.000Z","publisher":"No Starch Press","pages":352,"description":"ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that E","website":"https://leanpub.com/understandinges6/read"}]}
+
+13:03:18.614 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:03:18.614 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+13:03:18.630 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+13:03:18.636 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book?ISBN=9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fNGFkYjEyNTAtYWFiYy00NzI3LTg1ZjgtYTQ0NGZmYzg1ZGZlIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzM3OTZ9.yGbRRa8oQYcw9reifbDdDlrFwd2tynJOCw11aGhSSKY
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:03:19.142 [main] DEBUG com.intuit.karate - response time in milliseconds: 505
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:03:18 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 549
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"225-6wegpsdSbs3Zjpo/5fzJQey1dRQ"
+{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"}
+
+13:03:19.142 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:03:19.164 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:03:19.686 [main] DEBUG com.intuit.karate - request:
+2 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+
+
+13:03:19.878 [main] DEBUG com.intuit.karate - request:
+3 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+3 > Host: bookstore.toolsqa.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+3 > Accept-Encoding: gzip,deflate
+
+
+13:03:20.230 [main] DEBUG com.intuit.karate - response time in milliseconds: 180
+3 < 200
+3 < Server: nginx/1.17.10 (Ubuntu)
+3 < Date: Mon, 12 Jan 2026 16:03:19 GMT
+3 < Content-Type: text/html; charset=utf-8
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < ETag: W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"
+
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+
+
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<div id="swagger-ui"></div>
+
+<script src="./swagger-ui-bundle.js"> </script>
+<script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="./swagger-ui-init.js"> </script>
+
+
+
+<style>
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+</style>
+</body>
+
+</html>
+
+
+13:03:20.424 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) classpath:bookstore/bookstore.feature
+13:19:35.998 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+13:19:35.998 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768234775998
+13:19:35.998 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+13:19:37.118 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:19:37.470 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_7b13d629-4066-4b58-87c4-80fa4b33445e","password":"@Senha123"}
+
+13:19:39.134 [main] DEBUG com.intuit.karate - response time in milliseconds: 1664
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:19:38 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-tIdAqS5InUcBnGBVO3Pom9+pg60"
+{"userID":"bae13143-f35d-4793-bf87-e470d399686a","username":"usuario_7b13d629-4066-4b58-87c4-80fa4b33445e","books":[]}
+
+13:19:39.150 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:19:39.150 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:19:39.166 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_05597239-4ff5-4d55-9e42-987c1c13004a","password":"@Senha123"}
+
+13:19:40.077 [main] DEBUG com.intuit.karate - response time in milliseconds: 910
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:19:39 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-yutbp5YAV8EmEJUPrDTageX/DBo"
+{"userID":"35ff82f3-3693-47f3-ae3f-34c16447b4a4","username":"usuario_05597239-4ff5-4d55-9e42-987c1c13004a","books":[]}
+
+13:19:40.078 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_05597239-4ff5-4d55-9e42-987c1c13004a","password":"@Senha123"}
+
+13:19:41.262 [main] DEBUG com.intuit.karate - response time in milliseconds: 1183
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:19:40 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-tLK8lFnijIaV2CkAuwUlYWVw7/4"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fMDU1OTcyMzktNGZmNS00ZDU1LTllNDItOTg3YzFjMTMwMDRhIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ3ODB9.Xdk4plgZ7ALnEMMCY3uWqDdH-fr_rQHHQRn2k7S42x4","expires":"2026-01-19T16:19:40.205Z","status":"Success","result":"User authorized successfully."}
+
+13:19:41.280 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:19:41.294 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/35ff82f3-3693-47f3-ae3f-34c16447b4a4
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fMDU1OTcyMzktNGZmNS00ZDU1LTllNDItOTg3YzFjMTMwMDRhIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ3ODB9.Xdk4plgZ7ALnEMMCY3uWqDdH-fr_rQHHQRn2k7S42x4
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:19:42.766 [main] DEBUG com.intuit.karate - response time in milliseconds: 1472
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:19:42 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-Ms4GpWCvFwauScTgpEDcYMinJck"
+
+
+13:19:43.417 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:account/account.feature
+13:19:43.422 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:19:43.422 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:19:43.422 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_df1854ab-5534-4569-9302-b117af6e0ef6","password":"@Senha123"}
+
+13:19:44.703 [main] DEBUG com.intuit.karate - response time in milliseconds: 1281
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:19:44 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-W8Bpmj4JcMWVokfB/ELVoV2vKMI"
+{"userID":"26cb0653-809f-4aab-857a-fadc48c4f842","username":"usuario_df1854ab-5534-4569-9302-b117af6e0ef6","books":[]}
+
+13:19:44.707 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_df1854ab-5534-4569-9302-b117af6e0ef6","password":"@Senha123"}
+
+13:19:45.966 [main] DEBUG com.intuit.karate - response time in milliseconds: 1259
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:19:45 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-hsI1JhHNrZ3dFNjVf7s96GzN6NE"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fZGYxODU0YWItNTUzNC00NTY5LTkzMDItYjExN2FmNmUwZWY2IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ3ODR9.4YfvX3GP-siQwunVvBv-Bsu-W5v3zJGnpG5tjmIIdrk","expires":"2026-01-19T16:19:44.830Z","status":"Success","result":"User authorized successfully."}
+
+13:19:45.982 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:19:45.982 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Books
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:19:46.478 [main] DEBUG com.intuit.karate - response time in milliseconds: 496
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:19:46 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 4514
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"11a2-8zfX++QwcgaCjSU6F8JP9fUd1tY"
+{"books":[{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"},{"isbn":"9781449331818","title":"Learning JavaScript Design Patterns","subTitle":"A JavaScript and jQuery Developer's Guide","author":"Addy Osmani","publish_date":"2020-06-04T09:11:40.000Z","publisher":"O'Reilly Media","pages":254,"description":"With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-da","website":"http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"},{"isbn":"9781449337711","title":"Designing Evolvable Web APIs with ASP.NET","subTitle":"Harnessing the Power of the Web","author":"Glenn Block et al.","publish_date":"2020-06-04T09:12:43.000Z","publisher":"O'Reilly Media","pages":238,"description":"Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft","website":"http://chimera.labs.oreilly.com/books/1234000001708/index.html"},{"isbn":"9781449365035","title":"Speaking JavaScript","subTitle":"An In-Depth Guide for Programmers","author":"Axel Rauschmayer","publish_date":"2014-02-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":460,"description":"Like it or not, JavaScript is everywhere these days-from browser to server to mobile-and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who o","website":"http://speakingjs.com/"},{"isbn":"9781491904244","title":"You Don't Know JS","subTitle":"ES6 & Beyond","author":"Kyle Simpson","publish_date":"2015-12-27T00:00:00.000Z","publisher":"O'Reilly Media","pages":278,"description":"No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the \\\"You Don’t Know JS\\\" series, this compact guide focuses on new features available in ECMAScript 6 (ES6), the latest version of the st","website":"https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20&%20beyond"},{"isbn":"9781491950296","title":"Programming JavaScript Applications","subTitle":"Robust Web Architecture with Node, HTML5, and Modern JS Libraries","author":"Eric Elliott","publish_date":"2014-07-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":254,"description":"Take advantage of JavaScript's power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flex","website":"http://chimera.labs.oreilly.com/books/1234000000262/index.html"},{"isbn":"9781593275846","title":"Eloquent JavaScript, Second Edition","subTitle":"A Modern Introduction to Programming","author":"Marijn Haverbeke","publish_date":"2014-12-14T00:00:00.000Z","publisher":"No Starch Press","pages":472,"description":"JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale ","website":"http://eloquentjavascript.net/"},{"isbn":"9781593277574","title":"Understanding ECMAScript 6","subTitle":"The Definitive Guide for JavaScript Developers","author":"Nicholas C. Zakas","publish_date":"2016-09-03T00:00:00.000Z","publisher":"No Starch Press","pages":352,"description":"ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that E","website":"https://leanpub.com/understandinges6/read"}]}
+
+13:19:46.494 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:19:46.494 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+13:19:46.494 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+13:19:46.494 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book?ISBN=9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fZGYxODU0YWItNTUzNC00NTY5LTkzMDItYjExN2FmNmUwZWY2IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ3ODR9.4YfvX3GP-siQwunVvBv-Bsu-W5v3zJGnpG5tjmIIdrk
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:19:47.006 [main] DEBUG com.intuit.karate - response time in milliseconds: 512
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:19:46 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 549
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"225-6wegpsdSbs3Zjpo/5fzJQey1dRQ"
+{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"}
+
+13:19:47.022 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:19:47.022 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:19:47.545 [main] DEBUG com.intuit.karate - request:
+2 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+
+
+13:19:47.710 [main] DEBUG com.intuit.karate - request:
+3 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+3 > Host: bookstore.toolsqa.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+3 > Accept-Encoding: gzip,deflate
+
+
+13:19:48.058 [main] DEBUG com.intuit.karate - response time in milliseconds: 176
+3 < 200
+3 < Server: nginx/1.17.10 (Ubuntu)
+3 < Date: Mon, 12 Jan 2026 16:19:47 GMT
+3 < Content-Type: text/html; charset=utf-8
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < ETag: W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"
+
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+
+
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<div id="swagger-ui"></div>
+
+<script src="./swagger-ui-bundle.js"> </script>
+<script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="./swagger-ui-init.js"> </script>
+
+
+
+<style>
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+</style>
+</body>
+
+</html>
+
+
+13:19:48.064 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:19:48.067 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+13:19:48.069 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+13:19:48.072 [main] ERROR com.intuit.karate - classpath:bookstore/bookstore.feature:94
+And header Authorization 'Bearer ' + token
+no step-definition method match found for: header Authorization 'Bearer ' + token
+classpath:bookstore/bookstore.feature:94
+13:19:48.254 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:bookstore/bookstore.feature
+13:22:14.929 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+13:22:14.935 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768234934933
+13:22:14.940 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+13:22:16.427 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:22:16.815 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_c613cdae-1258-479f-a69f-c20824971c1b","password":"@Senha123"}
+
+13:22:18.555 [main] DEBUG com.intuit.karate - response time in milliseconds: 1724
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:22:18 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-4weqsS/Kf0aXEW6U540olPeTcAo"
+{"userID":"3d74220e-bab9-4d23-8547-50c10eaf8160","username":"usuario_c613cdae-1258-479f-a69f-c20824971c1b","books":[]}
+
+13:22:18.577 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:22:18.577 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:22:18.587 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_8ef11b28-9242-4189-b33a-37613ebe6609","password":"@Senha123"}
+
+13:22:19.692 [main] DEBUG com.intuit.karate - response time in milliseconds: 1105
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:22:19 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-X5SvcJv/47huylsGtPmRIWCJAQ4"
+{"userID":"5a803d51-6a7b-44f4-a030-b8c29451ac31","username":"usuario_8ef11b28-9242-4189-b33a-37613ebe6609","books":[]}
+
+13:22:19.692 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_8ef11b28-9242-4189-b33a-37613ebe6609","password":"@Senha123"}
+
+13:22:20.950 [main] DEBUG com.intuit.karate - response time in milliseconds: 1258
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:22:20 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-G6dIAJJidUVO6Xr4lAn83H7OMt0"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fOGVmMTFiMjgtOTI0Mi00MTg5LWIzM2EtMzc2MTNlYmU2NjA5IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ5Mzl9.fjx6uVv-lMgugvx62fF9CFrX2Qa2HoTANYFVyFTcGHE","expires":"2026-01-19T16:22:19.824Z","status":"Success","result":"User authorized successfully."}
+
+13:22:20.971 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:22:20.971 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/5a803d51-6a7b-44f4-a030-b8c29451ac31
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fOGVmMTFiMjgtOTI0Mi00MTg5LWIzM2EtMzc2MTNlYmU2NjA5IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ5Mzl9.fjx6uVv-lMgugvx62fF9CFrX2Qa2HoTANYFVyFTcGHE
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:22:22.438 [main] DEBUG com.intuit.karate - response time in milliseconds: 1466
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:22:22 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-6L+00tdBKdwLDvAA27MC7SllNMM"
+
+
+13:22:23.067 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:account/account.feature
+13:22:23.083 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:22:23.083 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:22:23.083 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_b2e365e6-27c2-48ba-bee8-0269a199eaca","password":"@Senha123"}
+
+13:22:24.411 [main] DEBUG com.intuit.karate - response time in milliseconds: 1328
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:22:24 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-o2PSbSUj4peXUH7CSzpX7FoyiqI"
+{"userID":"2f5e4e1b-3de9-4b00-a40c-1efdcb027822","username":"usuario_b2e365e6-27c2-48ba-bee8-0269a199eaca","books":[]}
+
+13:22:24.411 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_b2e365e6-27c2-48ba-bee8-0269a199eaca","password":"@Senha123"}
+
+13:22:25.803 [main] DEBUG com.intuit.karate - response time in milliseconds: 1392
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:22:25 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-9VJwvsV3SyHNN9vGYYAg3c479vc"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fYjJlMzY1ZTYtMjdjMi00OGJhLWJlZTgtMDI2OWExOTllYWNhIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ5NDR9.1qxt95JRCrP3TxDr75L5L6XwUpAv8FlGjAglQ1yvwL8","expires":"2026-01-19T16:22:24.540Z","status":"Success","result":"User authorized successfully."}
+
+13:22:25.803 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:22:25.803 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Books
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:22:26.331 [main] DEBUG com.intuit.karate - response time in milliseconds: 528
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:22:25 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 4514
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"11a2-8zfX++QwcgaCjSU6F8JP9fUd1tY"
+{"books":[{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"},{"isbn":"9781449331818","title":"Learning JavaScript Design Patterns","subTitle":"A JavaScript and jQuery Developer's Guide","author":"Addy Osmani","publish_date":"2020-06-04T09:11:40.000Z","publisher":"O'Reilly Media","pages":254,"description":"With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-da","website":"http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"},{"isbn":"9781449337711","title":"Designing Evolvable Web APIs with ASP.NET","subTitle":"Harnessing the Power of the Web","author":"Glenn Block et al.","publish_date":"2020-06-04T09:12:43.000Z","publisher":"O'Reilly Media","pages":238,"description":"Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft","website":"http://chimera.labs.oreilly.com/books/1234000001708/index.html"},{"isbn":"9781449365035","title":"Speaking JavaScript","subTitle":"An In-Depth Guide for Programmers","author":"Axel Rauschmayer","publish_date":"2014-02-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":460,"description":"Like it or not, JavaScript is everywhere these days-from browser to server to mobile-and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who o","website":"http://speakingjs.com/"},{"isbn":"9781491904244","title":"You Don't Know JS","subTitle":"ES6 & Beyond","author":"Kyle Simpson","publish_date":"2015-12-27T00:00:00.000Z","publisher":"O'Reilly Media","pages":278,"description":"No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the \\\"You Don’t Know JS\\\" series, this compact guide focuses on new features available in ECMAScript 6 (ES6), the latest version of the st","website":"https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20&%20beyond"},{"isbn":"9781491950296","title":"Programming JavaScript Applications","subTitle":"Robust Web Architecture with Node, HTML5, and Modern JS Libraries","author":"Eric Elliott","publish_date":"2014-07-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":254,"description":"Take advantage of JavaScript's power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flex","website":"http://chimera.labs.oreilly.com/books/1234000000262/index.html"},{"isbn":"9781593275846","title":"Eloquent JavaScript, Second Edition","subTitle":"A Modern Introduction to Programming","author":"Marijn Haverbeke","publish_date":"2014-12-14T00:00:00.000Z","publisher":"No Starch Press","pages":472,"description":"JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale ","website":"http://eloquentjavascript.net/"},{"isbn":"9781593277574","title":"Understanding ECMAScript 6","subTitle":"The Definitive Guide for JavaScript Developers","author":"Nicholas C. Zakas","publish_date":"2016-09-03T00:00:00.000Z","publisher":"No Starch Press","pages":352,"description":"ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that E","website":"https://leanpub.com/understandinges6/read"}]}
+
+13:22:26.331 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:22:26.331 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+13:22:26.331 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+13:22:26.347 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book?ISBN=9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fYjJlMzY1ZTYtMjdjMi00OGJhLWJlZTgtMDI2OWExOTllYWNhIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ5NDR9.1qxt95JRCrP3TxDr75L5L6XwUpAv8FlGjAglQ1yvwL8
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:22:26.863 [main] DEBUG com.intuit.karate - response time in milliseconds: 515
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:22:26 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 549
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"225-6wegpsdSbs3Zjpo/5fzJQey1dRQ"
+{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"}
+
+13:22:26.869 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:22:26.875 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:22:27.387 [main] DEBUG com.intuit.karate - request:
+2 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+
+
+13:22:27.563 [main] DEBUG com.intuit.karate - request:
+3 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+3 > Host: bookstore.toolsqa.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+3 > Accept-Encoding: gzip,deflate
+
+
+13:22:27.899 [main] DEBUG com.intuit.karate - response time in milliseconds: 179
+3 < 200
+3 < Server: nginx/1.17.10 (Ubuntu)
+3 < Date: Mon, 12 Jan 2026 16:22:27 GMT
+3 < Content-Type: text/html; charset=utf-8
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < ETag: W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"
+
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+
+
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<div id="swagger-ui"></div>
+
+<script src="./swagger-ui-bundle.js"> </script>
+<script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="./swagger-ui-init.js"> </script>
+
+
+
+<style>
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+</style>
+</body>
+
+</html>
+
+
+13:22:27.915 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:22:27.915 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+13:22:27.915 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+13:22:27.915 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://bookstore.toolsqa.com/BookStore/v1/Books/9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fYjJlMzY1ZTYtMjdjMi00OGJhLWJlZTgtMDI2OWExOTllYWNhIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ5NDR9.1qxt95JRCrP3TxDr75L5L6XwUpAv8FlGjAglQ1yvwL8
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 36
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userId":"userId","isbn":"newISBN"}
+
+13:22:28.427 [main] DEBUG com.intuit.karate - response time in milliseconds: 512
+1 < 400
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:22:28 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 79
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"4f-RpKuEeQ3Bj2uvDIxIXvc7QRyqm4"
+{"code":"1205","message":"ISBN supplied is not available in Books Collection!"}
+
+13:22:28.443 [main] ERROR com.intuit.karate - classpath:bookstore/bookstore.feature:97
+Then status 200
+status code was: 400, expected: 200, response time in milliseconds: 512, url: https://bookstore.toolsqa.com/BookStore/v1/Books/9781449325862, response: 
+{"code":"1205","message":"ISBN supplied is not available in Books Collection!"}
+classpath:bookstore/bookstore.feature:97
+13:22:28.667 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:bookstore/bookstore.feature
+13:22:52.219 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+13:22:52.235 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768234972219
+13:22:52.235 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+13:22:53.211 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:22:53.555 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_02e9b8ef-884b-4a56-a50c-4adfe3a4d848","password":"@Senha123"}
+
+13:22:54.267 [main] DEBUG com.intuit.karate - response time in milliseconds: 711
+1 < 502
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:22:53 GMT
+1 < Content-Type: text/html
+1 < Content-Length: 167
+1 < Connection: keep-alive
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.17.10 (Ubuntu)</center>
+</body>
+</html>
+
+
+13:22:54.283 [main] ERROR com.intuit.karate - classpath:account/account.feature:17
+Then status 201
+status code was: 502, expected: 201, response time in milliseconds: 711, url: https://bookstore.toolsqa.com/Account/v1/User, response: 
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.17.10 (Ubuntu)</center>
+</body>
+</html>
+
+classpath:account/account.feature:17
+13:22:54.283 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:22:54.299 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:22:54.314 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_46a89bb5-2d55-4720-8a73-53dba1a43e59","password":"@Senha123"}
+
+13:22:56.011 [main] DEBUG com.intuit.karate - response time in milliseconds: 1696
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:22:55 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-a9MeC/jysHRy7xLJ1WVmgo/LFwA"
+{"userID":"3f6d29b1-eb6e-482d-873a-ac366e953938","username":"usuario_46a89bb5-2d55-4720-8a73-53dba1a43e59","books":[]}
+
+13:22:56.011 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_46a89bb5-2d55-4720-8a73-53dba1a43e59","password":"@Senha123"}
+
+13:22:57.514 [main] DEBUG com.intuit.karate - response time in milliseconds: 1503
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:22:57 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-29T151atiySJrpZBvGPwTOhaAgs"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fNDZhODliYjUtMmQ1NS00NzIwLThhNzMtNTNkYmExYTQzZTU5IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ5NzZ9.RDmghBeDHUa2imN2CYRpYP_xipZV6sKj_qGIjwQyGSo","expires":"2026-01-19T16:22:56.145Z","status":"Success","result":"User authorized successfully."}
+
+13:22:57.531 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:22:57.531 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/3f6d29b1-eb6e-482d-873a-ac366e953938
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fNDZhODliYjUtMmQ1NS00NzIwLThhNzMtNTNkYmExYTQzZTU5IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ5NzZ9.RDmghBeDHUa2imN2CYRpYP_xipZV6sKj_qGIjwQyGSo
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:22:59.179 [main] DEBUG com.intuit.karate - response time in milliseconds: 1648
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:22:58 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-dO7ZViRz/tAd+9lh03vznqLRr8Y"
+
+
+13:22:59.803 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 2 (1 remaining) classpath:account/account.feature
+13:22:59.819 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:22:59.819 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:22:59.819 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_ac6a0679-70c2-4ef8-9920-148952bef25d","password":"@Senha123"}
+
+13:23:01.099 [main] DEBUG com.intuit.karate - response time in milliseconds: 1280
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:23:00 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-4bR4TznRTSCZGmswG4+2WL6gHy8"
+{"userID":"698d0a88-b6e5-435f-8a4f-9a8980345a95","username":"usuario_ac6a0679-70c2-4ef8-9920-148952bef25d","books":[]}
+
+13:23:01.103 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_ac6a0679-70c2-4ef8-9920-148952bef25d","password":"@Senha123"}
+
+13:23:02.571 [main] DEBUG com.intuit.karate - response time in milliseconds: 1468
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:23:02 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-41/dVqREZRiSU9q8xlvyfmfDz6U"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fYWM2YTA2NzktNzBjMi00ZWY4LTk5MjAtMTQ4OTUyYmVmMjVkIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ5ODF9.hmT54AgWwpDlYhSlYVC-YW8MRdGrDNvRCc8bzgMrMZE","expires":"2026-01-19T16:23:01.225Z","status":"Success","result":"User authorized successfully."}
+
+13:23:02.571 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:23:02.571 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Books
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:23:03.103 [main] DEBUG com.intuit.karate - response time in milliseconds: 532
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:23:02 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 4514
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"11a2-8zfX++QwcgaCjSU6F8JP9fUd1tY"
+{"books":[{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"},{"isbn":"9781449331818","title":"Learning JavaScript Design Patterns","subTitle":"A JavaScript and jQuery Developer's Guide","author":"Addy Osmani","publish_date":"2020-06-04T09:11:40.000Z","publisher":"O'Reilly Media","pages":254,"description":"With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-da","website":"http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"},{"isbn":"9781449337711","title":"Designing Evolvable Web APIs with ASP.NET","subTitle":"Harnessing the Power of the Web","author":"Glenn Block et al.","publish_date":"2020-06-04T09:12:43.000Z","publisher":"O'Reilly Media","pages":238,"description":"Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft","website":"http://chimera.labs.oreilly.com/books/1234000001708/index.html"},{"isbn":"9781449365035","title":"Speaking JavaScript","subTitle":"An In-Depth Guide for Programmers","author":"Axel Rauschmayer","publish_date":"2014-02-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":460,"description":"Like it or not, JavaScript is everywhere these days-from browser to server to mobile-and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who o","website":"http://speakingjs.com/"},{"isbn":"9781491904244","title":"You Don't Know JS","subTitle":"ES6 & Beyond","author":"Kyle Simpson","publish_date":"2015-12-27T00:00:00.000Z","publisher":"O'Reilly Media","pages":278,"description":"No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the \\\"You Don’t Know JS\\\" series, this compact guide focuses on new features available in ECMAScript 6 (ES6), the latest version of the st","website":"https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20&%20beyond"},{"isbn":"9781491950296","title":"Programming JavaScript Applications","subTitle":"Robust Web Architecture with Node, HTML5, and Modern JS Libraries","author":"Eric Elliott","publish_date":"2014-07-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":254,"description":"Take advantage of JavaScript's power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flex","website":"http://chimera.labs.oreilly.com/books/1234000000262/index.html"},{"isbn":"9781593275846","title":"Eloquent JavaScript, Second Edition","subTitle":"A Modern Introduction to Programming","author":"Marijn Haverbeke","publish_date":"2014-12-14T00:00:00.000Z","publisher":"No Starch Press","pages":472,"description":"JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale ","website":"http://eloquentjavascript.net/"},{"isbn":"9781593277574","title":"Understanding ECMAScript 6","subTitle":"The Definitive Guide for JavaScript Developers","author":"Nicholas C. Zakas","publish_date":"2016-09-03T00:00:00.000Z","publisher":"No Starch Press","pages":352,"description":"ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that E","website":"https://leanpub.com/understandinges6/read"}]}
+
+13:23:03.115 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:23:03.115 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+13:23:03.115 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+13:23:03.131 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book?ISBN=9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fYWM2YTA2NzktNzBjMi00ZWY4LTk5MjAtMTQ4OTUyYmVmMjVkIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ5ODF9.hmT54AgWwpDlYhSlYVC-YW8MRdGrDNvRCc8bzgMrMZE
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:23:03.643 [main] DEBUG com.intuit.karate - response time in milliseconds: 512
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:23:03 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 549
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"225-6wegpsdSbs3Zjpo/5fzJQey1dRQ"
+{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"}
+
+13:23:03.643 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:23:03.659 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:23:04.187 [main] DEBUG com.intuit.karate - request:
+2 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+
+
+13:23:04.363 [main] DEBUG com.intuit.karate - request:
+3 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+3 > Host: bookstore.toolsqa.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+3 > Accept-Encoding: gzip,deflate
+
+
+13:23:04.699 [main] DEBUG com.intuit.karate - response time in milliseconds: 176
+3 < 200
+3 < Server: nginx/1.17.10 (Ubuntu)
+3 < Date: Mon, 12 Jan 2026 16:23:04 GMT
+3 < Content-Type: text/html; charset=utf-8
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < ETag: W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"
+
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+
+
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<div id="swagger-ui"></div>
+
+<script src="./swagger-ui-bundle.js"> </script>
+<script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="./swagger-ui-init.js"> </script>
+
+
+
+<style>
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+</style>
+</body>
+
+</html>
+
+
+13:23:04.699 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:23:04.715 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+13:23:04.715 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+13:23:04.715 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://bookstore.toolsqa.com/BookStore/v1/Books/9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fYWM2YTA2NzktNzBjMi00ZWY4LTk5MjAtMTQ4OTUyYmVmMjVkIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzQ5ODF9.hmT54AgWwpDlYhSlYVC-YW8MRdGrDNvRCc8bzgMrMZE
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 36
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userID":"userID","isbn":"newISBN"}
+
+13:23:05.227 [main] DEBUG com.intuit.karate - response time in milliseconds: 512
+1 < 400
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:23:04 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 52
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"34-ixxKFxEiXTqp0CZzOZT9G73DzkM"
+{"code":"1207","message":"Request Body is Invalid!"}
+
+13:23:05.227 [main] ERROR com.intuit.karate - classpath:bookstore/bookstore.feature:97
+Then status 200
+status code was: 400, expected: 200, response time in milliseconds: 512, url: https://bookstore.toolsqa.com/BookStore/v1/Books/9781449325862, response: 
+{"code":"1207","message":"Request Body is Invalid!"}
+classpath:bookstore/bookstore.feature:97
+13:23:05.451 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:bookstore/bookstore.feature
+13:23:49.291 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+13:23:49.291 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768235029291
+13:23:49.307 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+13:23:50.283 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:23:50.619 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_d6209bcc-2adc-40cb-ac5a-5cffa3bab5df","password":"@Senha123"}
+
+13:23:52.038 [main] DEBUG com.intuit.karate - response time in milliseconds: 1408
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:23:51 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-Ew26yw/vDdO57K/Y6Hc4DLsG33U"
+{"userID":"6a1dd16e-b910-4522-946c-222dd9bc6604","username":"usuario_d6209bcc-2adc-40cb-ac5a-5cffa3bab5df","books":[]}
+
+13:23:52.053 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:23:52.059 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:23:52.069 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_b924add9-7dfa-4dd2-a227-ea8d80f2d70d","password":"@Senha123"}
+
+13:23:52.982 [main] DEBUG com.intuit.karate - response time in milliseconds: 907
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:23:52 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-EKdnuySqosPcCOhJaD5S0y1Dyyk"
+{"userID":"bf02f70c-6f61-4f07-ab29-a93508aaf659","username":"usuario_b924add9-7dfa-4dd2-a227-ea8d80f2d70d","books":[]}
+
+13:23:52.987 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_b924add9-7dfa-4dd2-a227-ea8d80f2d70d","password":"@Senha123"}
+
+13:23:54.329 [main] DEBUG com.intuit.karate - response time in milliseconds: 1342
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:23:53 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-HxSMjx0cyUz+8dpmTRxFFe3JuK0"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fYjkyNGFkZDktN2RmYS00ZGQyLWEyMjctZWE4ZDgwZjJkNzBkIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzUwMzN9.QPH3-a7hLWgxb9nG00t-a3gUx8A2xncFp3X-o5XvdJc","expires":"2026-01-19T16:23:53.110Z","status":"Success","result":"User authorized successfully."}
+
+13:23:54.342 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:23:54.347 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/bf02f70c-6f61-4f07-ab29-a93508aaf659
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fYjkyNGFkZDktN2RmYS00ZGQyLWEyMjctZWE4ZDgwZjJkNzBkIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzUwMzN9.QPH3-a7hLWgxb9nG00t-a3gUx8A2xncFp3X-o5XvdJc
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:23:55.857 [main] DEBUG com.intuit.karate - response time in milliseconds: 1510
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:23:55 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-9di1B/vadYU2BwBjpYbPleG8vf4"
+
+
+13:23:56.443 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:account/account.feature
+13:23:56.443 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:23:56.454 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:23:56.459 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_68e3d59b-d122-40d7-8b1c-ca596bc60451","password":"@Senha123"}
+
+13:23:57.718 [main] DEBUG com.intuit.karate - response time in milliseconds: 1259
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:23:57 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-0Qi/PCM0/Wq3sFL0cPkpWl3njzw"
+{"userID":"c024c585-3f01-4e17-b649-bd4ebea08e54","username":"usuario_68e3d59b-d122-40d7-8b1c-ca596bc60451","books":[]}
+
+13:23:57.723 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_68e3d59b-d122-40d7-8b1c-ca596bc60451","password":"@Senha123"}
+
+13:23:58.971 [main] DEBUG com.intuit.karate - response time in milliseconds: 1248
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:23:58 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-Y/WalP2ULa/y96/gYoT1LlfCRD8"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fNjhlM2Q1OWItZDEyMi00MGQ3LThiMWMtY2E1OTZiYzYwNDUxIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzUwMzd9.tM-G6l1pPQiilEr72gvtXj-HhNIZZv-coQs1Titi5aM","expires":"2026-01-19T16:23:57.845Z","status":"Success","result":"User authorized successfully."}
+
+13:23:58.971 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:23:58.981 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Books
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:23:59.493 [main] DEBUG com.intuit.karate - response time in milliseconds: 512
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:23:59 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 4514
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"11a2-8zfX++QwcgaCjSU6F8JP9fUd1tY"
+{"books":[{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"},{"isbn":"9781449331818","title":"Learning JavaScript Design Patterns","subTitle":"A JavaScript and jQuery Developer's Guide","author":"Addy Osmani","publish_date":"2020-06-04T09:11:40.000Z","publisher":"O'Reilly Media","pages":254,"description":"With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-da","website":"http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"},{"isbn":"9781449337711","title":"Designing Evolvable Web APIs with ASP.NET","subTitle":"Harnessing the Power of the Web","author":"Glenn Block et al.","publish_date":"2020-06-04T09:12:43.000Z","publisher":"O'Reilly Media","pages":238,"description":"Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft","website":"http://chimera.labs.oreilly.com/books/1234000001708/index.html"},{"isbn":"9781449365035","title":"Speaking JavaScript","subTitle":"An In-Depth Guide for Programmers","author":"Axel Rauschmayer","publish_date":"2014-02-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":460,"description":"Like it or not, JavaScript is everywhere these days-from browser to server to mobile-and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who o","website":"http://speakingjs.com/"},{"isbn":"9781491904244","title":"You Don't Know JS","subTitle":"ES6 & Beyond","author":"Kyle Simpson","publish_date":"2015-12-27T00:00:00.000Z","publisher":"O'Reilly Media","pages":278,"description":"No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the \\\"You Don’t Know JS\\\" series, this compact guide focuses on new features available in ECMAScript 6 (ES6), the latest version of the st","website":"https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20&%20beyond"},{"isbn":"9781491950296","title":"Programming JavaScript Applications","subTitle":"Robust Web Architecture with Node, HTML5, and Modern JS Libraries","author":"Eric Elliott","publish_date":"2014-07-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":254,"description":"Take advantage of JavaScript's power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flex","website":"http://chimera.labs.oreilly.com/books/1234000000262/index.html"},{"isbn":"9781593275846","title":"Eloquent JavaScript, Second Edition","subTitle":"A Modern Introduction to Programming","author":"Marijn Haverbeke","publish_date":"2014-12-14T00:00:00.000Z","publisher":"No Starch Press","pages":472,"description":"JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale ","website":"http://eloquentjavascript.net/"},{"isbn":"9781593277574","title":"Understanding ECMAScript 6","subTitle":"The Definitive Guide for JavaScript Developers","author":"Nicholas C. Zakas","publish_date":"2016-09-03T00:00:00.000Z","publisher":"No Starch Press","pages":352,"description":"ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that E","website":"https://leanpub.com/understandinges6/read"}]}
+
+13:23:59.499 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:23:59.509 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+13:23:59.509 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+13:23:59.515 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book?ISBN=9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fNjhlM2Q1OWItZDEyMi00MGQ3LThiMWMtY2E1OTZiYzYwNDUxIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzUwMzd9.tM-G6l1pPQiilEr72gvtXj-HhNIZZv-coQs1Titi5aM
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:24:00.054 [main] DEBUG com.intuit.karate - response time in milliseconds: 539
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:23:59 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 549
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"225-6wegpsdSbs3Zjpo/5fzJQey1dRQ"
+{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"}
+
+13:24:00.059 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:24:00.075 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:24:00.615 [main] DEBUG com.intuit.karate - request:
+2 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+
+
+13:24:00.790 [main] DEBUG com.intuit.karate - request:
+3 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+3 > Host: bookstore.toolsqa.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+3 > Accept-Encoding: gzip,deflate
+
+
+13:24:01.152 [main] DEBUG com.intuit.karate - response time in milliseconds: 176
+3 < 200
+3 < Server: nginx/1.17.10 (Ubuntu)
+3 < Date: Mon, 12 Jan 2026 16:24:00 GMT
+3 < Content-Type: text/html; charset=utf-8
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < ETag: W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"
+
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+
+
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<div id="swagger-ui"></div>
+
+<script src="./swagger-ui-bundle.js"> </script>
+<script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="./swagger-ui-init.js"> </script>
+
+
+
+<style>
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+</style>
+</body>
+
+</html>
+
+
+13:24:01.155 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:24:01.158 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+13:24:01.158 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+13:24:01.163 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://bookstore.toolsqa.com/BookStore/v1/Books/9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fNjhlM2Q1OWItZDEyMi00MGQ3LThiMWMtY2E1OTZiYzYwNDUxIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzUwMzd9.tM-G6l1pPQiilEr72gvtXj-HhNIZZv-coQs1Titi5aM
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 36
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userID":"userID","isbn":"newISBN"}
+
+13:24:01.677 [main] DEBUG com.intuit.karate - response time in milliseconds: 514
+1 < 400
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:24:01 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 52
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"34-ixxKFxEiXTqp0CZzOZT9G73DzkM"
+{"code":"1207","message":"Request Body is Invalid!"}
+
+13:24:01.680 [main] ERROR com.intuit.karate - classpath:bookstore/bookstore.feature:98
+* match response.books[0].isbn == newISBN
+match failed: EQUALS
+  $ | actual path does not exist (STRING:STRING)
+  '#notpresent'
+  '9781449331821'
+
+classpath:bookstore/bookstore.feature:98
+13:24:01.835 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:bookstore/bookstore.feature
+13:24:18.800 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+13:24:18.805 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768235058803
+13:24:18.811 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+13:24:20.000 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:24:20.416 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_93c11825-519e-48ef-a25b-c2d03cfa75c0","password":"@Senha123"}
+
+13:24:21.949 [main] DEBUG com.intuit.karate - response time in milliseconds: 1524
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:24:21 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-wHg3b+WEEHUMkbhFoa3e+pyyUaw"
+{"userID":"1117c222-3867-4fb8-9978-41946f00c5b2","username":"usuario_93c11825-519e-48ef-a25b-c2d03cfa75c0","books":[]}
+
+13:24:21.968 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:24:21.979 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:24:21.990 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_276bd00b-2e6c-40bd-8055-fb1e3f2e3976","password":"@Senha123"}
+
+13:24:22.833 [main] DEBUG com.intuit.karate - response time in milliseconds: 843
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:24:22 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-Q6JgiEgTWDfRaxLE6jphnzZlYII"
+{"userID":"2c6d019d-5883-49d9-a56b-245595a683ae","username":"usuario_276bd00b-2e6c-40bd-8055-fb1e3f2e3976","books":[]}
+
+13:24:22.836 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_276bd00b-2e6c-40bd-8055-fb1e3f2e3976","password":"@Senha123"}
+
+13:24:24.038 [main] DEBUG com.intuit.karate - response time in milliseconds: 1202
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:24:23 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-ka++E/m00aTBjW2k6gLIAx79hqs"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fMjc2YmQwMGItMmU2Yy00MGJkLTgwNTUtZmIxZTNmMmUzOTc2IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzUwNjJ9.3z9mhAV8isvPB5Q_8S1y7ycKNJXV415w8jNANYKTRuw","expires":"2026-01-19T16:24:22.961Z","status":"Success","result":"User authorized successfully."}
+
+13:24:24.052 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:24:24.061 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/2c6d019d-5883-49d9-a56b-245595a683ae
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fMjc2YmQwMGItMmU2Yy00MGJkLTgwNTUtZmIxZTNmMmUzOTc2IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzUwNjJ9.3z9mhAV8isvPB5Q_8S1y7ycKNJXV415w8jNANYKTRuw
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:24:25.649 [main] DEBUG com.intuit.karate - response time in milliseconds: 1588
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:24:25 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-4CDIlmKmvrrISS5PPa9CaCgUoGM"
+
+
+13:24:26.372 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:account/account.feature
+13:24:26.383 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:24:26.387 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+13:24:26.397 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_3e38688d-f821-476c-a0f3-5ecd1f24e495","password":"@Senha123"}
+
+13:24:27.683 [main] DEBUG com.intuit.karate - response time in milliseconds: 1284
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:24:27 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-XEzBMa+BWKxIVxphYg7nxhGB3tU"
+{"userID":"d73796fb-d8e7-4d38-a961-b88e070dd4ad","username":"usuario_3e38688d-f821-476c-a0f3-5ecd1f24e495","books":[]}
+
+13:24:27.686 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_3e38688d-f821-476c-a0f3-5ecd1f24e495","password":"@Senha123"}
+
+13:24:29.117 [main] DEBUG com.intuit.karate - response time in milliseconds: 1431
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 16:24:28 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-9kzdS5l3GD3v8R4U5HlC8ytGR0c"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fM2UzODY4OGQtZjgyMS00NzZjLWEwZjMtNWVjZDFmMjRlNDk1IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzUwNjd9.QzmeKnxqgZw8MX8uSs-AZIrOZW3WC8mMLQLZVE3XYmA","expires":"2026-01-19T16:24:27.797Z","status":"Success","result":"User authorized successfully."}
+
+13:24:29.121 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+13:24:29.123 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Books
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:24:29.647 [main] DEBUG com.intuit.karate - response time in milliseconds: 523
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:24:29 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 4514
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"11a2-8zfX++QwcgaCjSU6F8JP9fUd1tY"
+{"books":[{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"},{"isbn":"9781449331818","title":"Learning JavaScript Design Patterns","subTitle":"A JavaScript and jQuery Developer's Guide","author":"Addy Osmani","publish_date":"2020-06-04T09:11:40.000Z","publisher":"O'Reilly Media","pages":254,"description":"With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-da","website":"http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"},{"isbn":"9781449337711","title":"Designing Evolvable Web APIs with ASP.NET","subTitle":"Harnessing the Power of the Web","author":"Glenn Block et al.","publish_date":"2020-06-04T09:12:43.000Z","publisher":"O'Reilly Media","pages":238,"description":"Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft","website":"http://chimera.labs.oreilly.com/books/1234000001708/index.html"},{"isbn":"9781449365035","title":"Speaking JavaScript","subTitle":"An In-Depth Guide for Programmers","author":"Axel Rauschmayer","publish_date":"2014-02-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":460,"description":"Like it or not, JavaScript is everywhere these days-from browser to server to mobile-and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who o","website":"http://speakingjs.com/"},{"isbn":"9781491904244","title":"You Don't Know JS","subTitle":"ES6 & Beyond","author":"Kyle Simpson","publish_date":"2015-12-27T00:00:00.000Z","publisher":"O'Reilly Media","pages":278,"description":"No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the \\\"You Don’t Know JS\\\" series, this compact guide focuses on new features available in ECMAScript 6 (ES6), the latest version of the st","website":"https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20&%20beyond"},{"isbn":"9781491950296","title":"Programming JavaScript Applications","subTitle":"Robust Web Architecture with Node, HTML5, and Modern JS Libraries","author":"Eric Elliott","publish_date":"2014-07-01T00:00:00.000Z","publisher":"O'Reilly Media","pages":254,"description":"Take advantage of JavaScript's power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flex","website":"http://chimera.labs.oreilly.com/books/1234000000262/index.html"},{"isbn":"9781593275846","title":"Eloquent JavaScript, Second Edition","subTitle":"A Modern Introduction to Programming","author":"Marijn Haverbeke","publish_date":"2014-12-14T00:00:00.000Z","publisher":"No Starch Press","pages":472,"description":"JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale ","website":"http://eloquentjavascript.net/"},{"isbn":"9781593277574","title":"Understanding ECMAScript 6","subTitle":"The Definitive Guide for JavaScript Developers","author":"Nicholas C. Zakas","publish_date":"2016-09-03T00:00:00.000Z","publisher":"No Starch Press","pages":352,"description":"ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that E","website":"https://leanpub.com/understandinges6/read"}]}
+
+13:24:29.656 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:24:29.660 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+13:24:29.662 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+13:24:29.670 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book?ISBN=9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fM2UzODY4OGQtZjgyMS00NzZjLWEwZjMtNWVjZDFmMjRlNDk1IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzUwNjd9.QzmeKnxqgZw8MX8uSs-AZIrOZW3WC8mMLQLZVE3XYmA
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:24:30.180 [main] DEBUG com.intuit.karate - response time in milliseconds: 510
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:24:29 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 549
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"225-6wegpsdSbs3Zjpo/5fzJQey1dRQ"
+{"isbn":"9781449325862","title":"Git Pocket Guide","subTitle":"A Working Introduction","author":"Richard E. Silverman","publish_date":"2020-06-04T08:48:39.000Z","publisher":"O'Reilly Media","pages":234,"description":"This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp","website":"http://chimera.labs.oreilly.com/books/1230000000561/index.html"}
+
+13:24:30.180 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:24:30.197 [main] DEBUG com.intuit.karate - request:
+1 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:24:30.713 [main] DEBUG com.intuit.karate - request:
+2 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+
+
+13:24:30.884 [main] DEBUG com.intuit.karate - request:
+3 > GET https://bookstore.toolsqa.com/Bookstore/v1/Book/0000000000
+3 > Host: bookstore.toolsqa.com
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+3 > Accept-Encoding: gzip,deflate
+
+
+13:24:31.229 [main] DEBUG com.intuit.karate - response time in milliseconds: 176
+3 < 200
+3 < Server: nginx/1.17.10 (Ubuntu)
+3 < Date: Mon, 12 Jan 2026 16:24:30 GMT
+3 < Content-Type: text/html; charset=utf-8
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < ETag: W/"c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs"
+
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  <style>
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/>
+    </symbol>
+
+
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/>
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<div id="swagger-ui"></div>
+
+<script src="./swagger-ui-bundle.js"> </script>
+<script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="./swagger-ui-init.js"> </script>
+
+
+
+<style>
+  .swagger-ui .topbar .download-url-wrapper { display: none } undefined
+</style>
+</body>
+
+</html>
+
+
+13:24:31.236 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:24:31.239 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'auth' with new value: callonce read('classpath:auth/auth.feature')
+13:24:31.240 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'token' with new value: auth.token
+13:24:31.245 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://bookstore.toolsqa.com/BookStore/v1/Books/9781449325862
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fM2UzODY4OGQtZjgyMS00NzZjLWEwZjMtNWVjZDFmMjRlNDk1IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMzUwNjd9.QzmeKnxqgZw8MX8uSs-AZIrOZW3WC8mMLQLZVE3XYmA
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 36
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userID":"userID","isbn":"newISBN"}
+
+13:24:31.748 [main] DEBUG com.intuit.karate - response time in milliseconds: 503
+1 < 400
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 16:24:31 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 52
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"34-ixxKFxEiXTqp0CZzOZT9G73DzkM"
+{"code":"1207","message":"Request Body is Invalid!"}
+
+13:24:31.965 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) classpath:bookstore/bookstore.feature

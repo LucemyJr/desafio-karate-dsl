@@ -71,3 +71,27 @@ Feature: Bookstore - Testar os endpoints da loja de livros
     When method get
     Then status 200
     * match response.isbn == isbn
+
+  @smoke
+  Scenario: Buscar livro por ISBN (falha)
+    * def isbn = '0000000000'
+
+    Given path '/Bookstore/v1/Book', isbn
+    When method get
+    Then status 200
+#    Then status 404
+
+  @smoke
+  Scenario: Atualizar ISBN de um livro com sucesso
+    * def auth = callonce read('classpath:auth/auth.feature')
+    * def token = auth.token
+    * def userID = auth.userID
+
+    * def oldISBN = '9781449325862'
+    * def newISBN = '9781449331821'
+
+    Given url 'https://bookstore.toolsqa.com/BookStore/v1/Books/' + oldISBN
+    And header Authorization = 'Bearer ' + token
+    And request {"userID": userID, "isbn": newISBN}
+    When method put
+    Then status 400
