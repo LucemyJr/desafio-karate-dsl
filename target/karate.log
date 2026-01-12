@@ -2179,3 +2179,444 @@ classpath:account/account.feature:33
 {"code":"1207","message":"User Id not correct!"}
 
 17:25:49.357 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:account/account.feature
+10:35:04.079 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:35:04.085 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768224904082
+10:35:05.183 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:35:05.651 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_8e9b7633-1248-4b3a-877c-414dc19e1a26","password":"@Senha123"}
+
+10:35:07.287 [main] DEBUG com.intuit.karate - response time in milliseconds: 1633
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:35:06 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-4cmPBB2QIuKBWGHbcZPpmPw6cUQ"
+{"userID":"a080269f-e1fa-46b9-85a2-fcd9aa7b770b","username":"usuario_8e9b7633-1248-4b3a-877c-414dc19e1a26","books":[]}
+
+10:35:07.301 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:35:07.316 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+10:35:07.331 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_3aba74f9-e8e2-4e2d-9238-75387b38523d","password":"@Senha123"}
+
+10:35:08.222 [main] DEBUG com.intuit.karate - response time in milliseconds: 890
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:35:07 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-tPPBgNKuGg644+3afP/9b/nUpqk"
+{"userID":"67fabeb9-8b5e-4934-bd3b-5b4b97b6e4b5","username":"usuario_3aba74f9-e8e2-4e2d-9238-75387b38523d","books":[]}
+
+10:35:08.227 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_3aba74f9-e8e2-4e2d-9238-75387b38523d","password":"@Senha123"}
+
+10:35:09.526 [main] DEBUG com.intuit.karate - response time in milliseconds: 1298
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 13:35:09 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-I+q+HKS5XuEhYXTjDI7fkCLErPA"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fM2FiYTc0ZjktZThlMi00ZTJkLTkyMzgtNzUzODdiMzg1MjNkIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMjQ5MDh9.DzwtW424iyIS1RLX-0BMdDhdxCiPLRuBT4U-NTrlZvk","expires":"2026-01-19T13:35:08.374Z","status":"Success","result":"User authorized successfully."}
+
+10:35:09.549 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+10:35:09.557 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/67fabeb9-8b5e-4934-bd3b-5b4b97b6e4b5
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fM2FiYTc0ZjktZThlMi00ZTJkLTkyMzgtNzUzODdiMzg1MjNkIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMjQ5MDh9.DzwtW424iyIS1RLX-0BMdDhdxCiPLRuBT4U-NTrlZvk
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+10:35:11.252 [main] DEBUG com.intuit.karate - response time in milliseconds: 1694
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:35:10 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-qnnLmDS/aDOyL5nzS95W0MtpyHI"
+
+
+10:35:11.258 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:35:11.265 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/12345
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fM2FiYTc0ZjktZThlMi00ZTJkLTkyMzgtNzUzODdiMzg1MjNkIiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMjQ5MDh9.DzwtW424iyIS1RLX-0BMdDhdxCiPLRuBT4U-NTrlZvk
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+10:35:11.785 [main] DEBUG com.intuit.karate - response time in milliseconds: 520
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:35:11 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"30-zoAnprTpYK9HmHYlpHOx6U+Br2A"
+{"code":"1207","message":"User Id not correct!"}
+
+10:35:11.794 [main] ERROR com.intuit.karate - classpath:account/account.feature:33
+Then status 404
+status code was: 200, expected: 404, response time in milliseconds: 520, url: https://bookstore.toolsqa.com/Account/v1/User/12345, response: 
+{"code":"1207","message":"User Id not correct!"}
+classpath:account/account.feature:33
+10:35:12.420 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) classpath:account/account.feature
+10:41:17.435 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:41:17.435 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768225277435
+10:41:18.475 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:41:18.828 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_ce826b68-ed72-4470-a606-ad63c9f8d6e3","password":"@Senha123"}
+
+10:41:20.251 [main] DEBUG com.intuit.karate - response time in milliseconds: 1422
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:41:19 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-GK41bhh1WSqTTuXwkDWsJtkDsv4"
+{"userID":"7a99c16a-aa90-4176-8a9b-75136c964082","username":"usuario_ce826b68-ed72-4470-a606-ad63c9f8d6e3","books":[]}
+
+10:41:20.267 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:41:20.283 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+10:41:20.299 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_c398b4e7-0a62-4f6d-803b-dd8130fd4f76","password":"@Senha123"}
+
+10:41:21.243 [main] DEBUG com.intuit.karate - response time in milliseconds: 944
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:41:20 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-b3iZAMcuF5j9mOwnsxHEnlMQl34"
+{"userID":"185526ca-f381-4cc9-a619-b9c7b0139e45","username":"usuario_c398b4e7-0a62-4f6d-803b-dd8130fd4f76","books":[]}
+
+10:41:21.243 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_c398b4e7-0a62-4f6d-803b-dd8130fd4f76","password":"@Senha123"}
+
+10:41:22.287 [main] DEBUG com.intuit.karate - response time in milliseconds: 1044
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 13:41:21 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-IXrmYlsC9OGuFTLhUZgzhUpS8/0"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fYzM5OGI0ZTctMGE2Mi00ZjZkLTgwM2ItZGQ4MTMwZmQ0Zjc2IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMjUyODF9.Otaii0lo8x4techlPguHuY0r8Y1bRh1LPVwUISPiBhw","expires":"2026-01-19T13:41:21.379Z","status":"Success","result":"User authorized successfully."}
+
+10:41:22.299 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+10:41:22.315 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/185526ca-f381-4cc9-a619-b9c7b0139e45
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fYzM5OGI0ZTctMGE2Mi00ZjZkLTgwM2ItZGQ4MTMwZmQ0Zjc2IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMjUyODF9.Otaii0lo8x4techlPguHuY0r8Y1bRh1LPVwUISPiBhw
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+10:41:23.243 [main] DEBUG com.intuit.karate - response time in milliseconds: 912
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:41:22 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-cdg8SlL1sUqOLZlhK50H4PNFMpI"
+
+
+10:41:23.247 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:41:23.248 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/12345
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fYzM5OGI0ZTctMGE2Mi00ZjZkLTgwM2ItZGQ4MTMwZmQ0Zjc2IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMjUyODF9.Otaii0lo8x4techlPguHuY0r8Y1bRh1LPVwUISPiBhw
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+10:41:23.755 [main] DEBUG com.intuit.karate - response time in milliseconds: 507
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:41:23 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"30-zoAnprTpYK9HmHYlpHOx6U+Br2A"
+{"code":"1207","message":"User Id not correct!"}
+
+10:41:24.363 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:account/account.feature
+10:48:33.481 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:48:33.481 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768225713481
+10:48:34.521 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:48:34.922 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_ac8792d2-28a0-4f4c-82df-ff4a5b22e124","password":"@Senha123"}
+
+10:48:36.458 [main] DEBUG com.intuit.karate - response time in milliseconds: 1519
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:48:36 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-ovdzySr7pKUMqXJSlmg2Z9NimZo"
+{"userID":"b9a5e8c7-720d-478a-8d60-793d584b6b39","username":"usuario_ac8792d2-28a0-4f4c-82df-ff4a5b22e124","books":[]}
+
+10:48:36.473 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:48:36.473 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+10:48:36.497 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_955db469-37c7-44f2-b425-ed8142e04b38","password":"@Senha123"}
+
+10:48:37.433 [main] DEBUG com.intuit.karate - response time in milliseconds: 936
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:48:37 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-BqYU7CxDlkEAiDOo5OHj8iTChrE"
+{"userID":"9aaddbb3-a067-4b77-804f-8e4dbd989633","username":"usuario_955db469-37c7-44f2-b425-ed8142e04b38","books":[]}
+
+10:48:37.449 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_955db469-37c7-44f2-b425-ed8142e04b38","password":"@Senha123"}
+
+10:48:38.794 [main] DEBUG com.intuit.karate - response time in milliseconds: 1345
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 13:48:38 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-IIoarNKUXDI5k7jNqAbo57TcshQ"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fOTU1ZGI0NjktMzdjNy00NGYyLWI0MjUtZWQ4MTQyZTA0YjM4IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMjU3MTd9.sbkxGvyJl51OHtXpw96OuATgzoO_aFR3vmtAVbsCRPg","expires":"2026-01-19T13:48:37.567Z","status":"Success","result":"User authorized successfully."}
+
+10:48:38.826 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+10:48:38.826 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/9aaddbb3-a067-4b77-804f-8e4dbd989633
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fOTU1ZGI0NjktMzdjNy00NGYyLWI0MjUtZWQ4MTQyZTA0YjM4IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMjU3MTd9.sbkxGvyJl51OHtXpw96OuATgzoO_aFR3vmtAVbsCRPg
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+10:48:40.281 [main] DEBUG com.intuit.karate - response time in milliseconds: 1455
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:48:39 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-UPa6fPanhKqYdTjbuZiv+nArPYI"
+
+
+10:48:40.287 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:48:40.292 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/12345
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fOTU1ZGI0NjktMzdjNy00NGYyLWI0MjUtZWQ4MTQyZTA0YjM4IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMjU3MTd9.sbkxGvyJl51OHtXpw96OuATgzoO_aFR3vmtAVbsCRPg
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+10:48:40.809 [main] DEBUG com.intuit.karate - response time in milliseconds: 516
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:48:40 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"30-zoAnprTpYK9HmHYlpHOx6U+Br2A"
+{"code":"1207","message":"User Id not correct!"}
+
+10:48:41.434 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:account/account.feature
+10:50:27.524 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:50:27.524 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1768225827524
+10:50:28.452 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:50:28.780 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_148e24f8-750d-407a-98a8-95893a63ea55","password":"@Senha123"}
+
+10:50:30.291 [main] DEBUG com.intuit.karate - response time in milliseconds: 1511
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:50:29 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-x4SILLhT6TDquovuji1fPq88PdY"
+{"userID":"638bf1f0-833b-430e-8f24-de5152fad1b5","username":"usuario_148e24f8-750d-407a-98a8-95893a63ea55","books":[]}
+
+10:50:30.308 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:50:30.324 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:auth/auth.feature')
+10:50:30.324 [main] DEBUG com.intuit.karate - request:
+1 > POST https://bookstore.toolsqa.com/Account/v1/User
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 82
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_f2593525-fd30-45b0-877a-01aa40019b75","password":"@Senha123"}
+
+10:50:31.283 [main] DEBUG com.intuit.karate - response time in milliseconds: 959
+1 < 201
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:50:30 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 118
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"76-w2nh66JzlK94cgAR51RicbvT55M"
+{"userID":"2d30797b-7c00-4752-a1bf-5565dba9d2f0","username":"usuario_f2593525-fd30-45b0-877a-01aa40019b75","books":[]}
+
+10:50:31.283 [main] DEBUG com.intuit.karate - request:
+2 > POST https://bookstore.toolsqa.com/Account/v1/GenerateToken
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 82
+2 > Host: bookstore.toolsqa.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"userName":"usuario_f2593525-fd30-45b0-877a-01aa40019b75","password":"@Senha123"}
+
+10:50:32.503 [main] DEBUG com.intuit.karate - response time in milliseconds: 1220
+2 < 200
+2 < Server: nginx/1.17.10 (Ubuntu)
+2 < Date: Mon, 12 Jan 2026 13:50:32 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 322
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < ETag: W/"142-pLLa7aQqbt44sYl2RRLidfYrM6g"
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fZjI1OTM1MjUtZmQzMC00NWIwLTg3N2EtMDFhYTQwMDE5Yjc1IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMjU4MzF9.v6ZhNd1L8l9R7XyKWxAX7UqTyen1kuEUSjip-NTUgPA","expires":"2026-01-19T13:50:31.428Z","status":"Success","result":"User authorized successfully."}
+
+10:50:32.516 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:auth/auth.feature')
+10:50:32.516 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/2d30797b-7c00-4752-a1bf-5565dba9d2f0
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fZjI1OTM1MjUtZmQzMC00NWIwLTg3N2EtMDFhYTQwMDE5Yjc1IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMjU4MzF9.v6ZhNd1L8l9R7XyKWxAX7UqTyen1kuEUSjip-NTUgPA
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+10:50:34.201 [main] DEBUG com.intuit.karate - response time in milliseconds: 1685
+1 < 204
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:50:33 GMT
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"58-dCB0rfcUoFWmfgXKpkXwIW+qE7Q"
+
+
+10:50:34.201 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:50:34.212 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://bookstore.toolsqa.com/Account/v1/User/12345
+1 > Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InVzdWFyaW9fZjI1OTM1MjUtZmQzMC00NWIwLTg3N2EtMDFhYTQwMDE5Yjc1IiwicGFzc3dvcmQiOiJAU2VuaGExMjMiLCJpYXQiOjE3NjgyMjU4MzF9.v6ZhNd1L8l9R7XyKWxAX7UqTyen1kuEUSjip-NTUgPA
+1 > Host: bookstore.toolsqa.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+10:50:34.739 [main] DEBUG com.intuit.karate - response time in milliseconds: 527
+1 < 200
+1 < Server: nginx/1.17.10 (Ubuntu)
+1 < Date: Mon, 12 Jan 2026 13:50:34 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 48
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < ETag: W/"30-zoAnprTpYK9HmHYlpHOx6U+Br2A"
+{"code":"1207","message":"User Id not correct!"}
+
+10:50:35.316 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:account/account.feature

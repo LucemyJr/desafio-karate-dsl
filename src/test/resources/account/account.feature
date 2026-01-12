@@ -30,4 +30,6 @@ Feature: Account - Testar os endpoints da conta
     Given url baseUrl + '/Account/v1/User/12345'
     And header Authorization = 'Bearer ' + auth.token
     When method delete
-    Then status 404
+    Then status 200
+    * match response.code == '1207'
+

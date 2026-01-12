@@ -37,3 +37,23 @@ Feature: Bookstore - Testar os endpoints da loja de livros
     When method post
     Then status 201
     * match response.books[0].isbn == isbn
+
+  Scenario: Adicionar um livro ao usuário (falha)
+    * def userID = auth.userID
+    * def isbn = '0000000000'
+
+    Given path '/Bookstore/v1/Books'
+    And header Authorization = 'Baerer ' + token
+    And request
+
+    """
+    {
+      "userID": "#(userID)",
+      "CollectionOfIsbn": [
+        {"isbn": "#(isbn)"}
+      ]
+     }
+    """
+
+    When method post
+    Then status 400
